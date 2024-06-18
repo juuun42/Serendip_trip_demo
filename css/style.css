@@ -315,7 +315,6 @@ li {
 /* 検索画面 */
 
 .search__modal {
-  border: 2px solid #2ea7e0;
   background-color: rgba(217, 210, 210, 0.8);
   position: fixed;
   width: 500px;
@@ -326,6 +325,7 @@ li {
   z-index: 10;
 }
 .search__modal-inner {
+  border: 2px solid #2ea7e0;
   width: 496px;
   height: 260px;
   /* margin: auto; */
