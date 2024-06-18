@@ -23,7 +23,7 @@ li {
   top: 0;
   height: 100%;
   width: calc(50% - 250px);
-  background-image: url(/img/PC_bg.png);
+  background-image: url(../img/PC_bg.png);
   background-size: cover;
   background-position: center;
 }
