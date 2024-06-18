@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <!-- <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
   </head>
@@ -139,6 +138,22 @@
             </div>
           </div>
         </div>
+        <div class="search__modal">
+          <div class="search__modal-inner">
+            <div class="search__close-container">
+              <div class="search__close-btn">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <p>SEARCH</p>
+            <form method="get" action="#" class="search__modal-container">
+              <input type="text" size="50" placeholder="青森市,コーヒー,ねぶた etc.">
+              <input type="submit" value="">
+              <i class="fas fa-search"></i>
+            </form>
+          </div>
+        </div>
         <main>
           <div class="splide main__mv-slider">
             <div class="splide__track">
@@ -158,41 +173,93 @@
               </ul>
             </div>
           </div>
+          <div class="site-concept">
+            <p>よつばのクローバーは</p>
+            <p>旅人を待っている。</p>
+          </div>
           <sec class="trip-themes">
-            <div class="trip-themes__inner">
-              <div class="trip-themes__title-area">
-                <h2 class="trip-themes__title">Explore your interest</h2>
-                <div class="trip-themes__search-btn">
-                  <img src="img/search-btn.png" alt="" width="40" height="40">
+            <h2 class="trip-themes__title">Explore your interest</h2>
+            <img src="img/search-btn.png" alt="" class="trip-themes__search-btn" width="40" height="40">
+           
+            <!-- モーダルが全画面を覆う設定じゃない場合こっちを使う -->
+            <!-- <div class="search__modal">
+              <div class="search__close-container">
+                <div class="search__close-btn">
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
+              <p>SEARCH</p>
+              <form method="get" action="#" class="search__modal-container">
+                <input type="text" size="50" placeholder="青森市,コーヒー,ねぶた etc.">
+                <input type="submit" value="">
+                <i class="fas fa-search"></i>
+              </form>
+            </div> -->
+            <div class="trip-themes__inner">
               <div class="trip-themes__list">
                 <a href="" class="trip-themes__link">
                   <div class="trip-themes__item">
-                    <img src="" alt="" class="trip-themes__thumbnail">
-                    <h3 class="trip-themes__title"></h3>
+                    <img src="img/theme_01.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">定番<span>POPULAR</h3>
                   </div>
                 </a>
                 <a href="" class="trip-themes__link">
                   <div class="trip-themes__item">
-                    <img src="" alt="" class="trip-themes__thumbnail">
-                    <h3 class="trip-themes__title"></h3>
+                    <img src="img/theme_02.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">アート<span>ART</h3>
                   </div>
                 </a>
                 <a href="" class="trip-themes__link">
                   <div class="trip-themes__item">
-                    <img src="" alt="" class="trip-themes__thumbnail">
-                    <h3 class="trip-themes__title"></h3>
+                    <img src="img/theme_03.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">食体験<span>FOOD</h3>
                   </div>
                 </a>
                 <a href="" class="trip-themes__link">
                   <div class="trip-themes__item">
-                    <img src="" alt="" class="trip-themes__thumbnail">
-                    <h3 class="trip-themes__title"></h3>
+                    <img src="img/theme_04.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">歴史・文学・神社仏閣<span>HISTORY</h3>
+                  </div>
+                </a>
+                <a href="" class="trip-themes__link">
+                  <div class="trip-themes__item">
+                    <img src="img/theme_05.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">祭り<span>FESTIVAL</h3>
+                  </div>
+                </a>
+                <a href="" class="trip-themes__link">
+                  <div class="trip-themes__item">
+                    <img src="img/theme_06.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">自然・絶景<span>NATURE</h3>
+                  </div>
+                </a>
+                <a href="" class="trip-themes__link">
+                  <div class="trip-themes__item">
+                    <img src="img/theme_07.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">宿<span>ACCOMMO DATION</h3>
+                  </div>
+                </a>
+                <a href="" class="trip-themes__link">
+                  <div class="trip-themes__item">
+                    <img src="img/theme_08.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">伝統工芸<span>CRAFTS</h3>
+                  </div>
+                </a>
+                <a href="" class="trip-themes__link">
+                  <div class="trip-themes__item">
+                    <img src="img/theme_09.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">土産<span>SOUVENIR</h3>
+                  </div>
+                </a>
+                <a href="" class="trip-themes__link">
+                  <div class="trip-themes__item">
+                    <img src="img/theme_10.png" alt="" class="trip-themes__thumbnail">
+                    <h3 class="trip-themes__theme-title">体験・ふれあい<span>LOCAL ACTIVITY</h3>
                   </div>
                 </a>
               </div>
-
+              
             </div>
           </sec>
         </main>

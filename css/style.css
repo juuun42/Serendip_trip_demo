@@ -229,7 +229,199 @@ li {
 .header__nav.active {
   top: 0;
 }
+.main__mv-img {
+  width: 100%;
+}
+.site-concept {
+  margin-bottom: 30px;
+  padding: 0 20px;
+  background-image: url();
+}
+.site-concept p {
+  color: #e73118;
+  font-weight: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  line-height: 2;
+  margin-left: 35px;
+}
+.trip-themes {
+  position: relative;
+}
+.trip-themes__title,
+.trip-themes__search-btn {
+  position: relative;
+  z-index: 1;
+}
+.trip-themes__inner {
+  padding: 0 20px;
+}
+.trip-themes__title {
+  color: #e73118;
+  font-weight: bold;
+  font-family: "Toppan Bunkyu Midashi Gothic";
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  position: relative;
+  left: 43%;
+  transform: translateX(-50%);
+}
+.trip-themes__search-btn {
+  display: inline;
+  position: relative;
+  left: 4%;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.trip-themes__title.active {
+  display: none;
+}
+.trip-themes__search-btn.active {
+  display: none;
+}
+ .trip-themes__item {
+  position: relative;
+ }  
+.trip-themes__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 50px 0;
+}
+.trip-themes__thumbnail {
+  border-radius: 20px;
+}
+.trip-themes__theme-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: 0.9px;
+}
+.trip-themes__theme-title span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+}
 
+/* 検索画面 */
+
+.search__modal {
+  border: 2px solid #2ea7e0;
+  background-color: rgba(217, 210, 210, 0.8);
+  position: fixed;
+  width: 500px;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.search__modal-inner {
+  width: 496px;
+  height: 260px;
+  /* margin: auto; */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.search__modal.active {
+  display: block;
+}
+.search__close-container {
+  position: relative;
+}
+.search__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 36px;
+  border: 1px solid #2ea7e0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.search__close-btn span {
+  display: inline-block;
+  transition: all 0.8s;
+  position: absolute;
+  left: 8px;
+  height: 1px;
+  background: #2ea7e0;
+  width: 80%;
+}
+.search__close-btn span:nth-of-type(1) {
+  transform: translateY(6px) rotate(-45deg);
+  top: 13px;
+  left: 5px;
+}
+.search__close-btn span:nth-of-type(2) {
+  transform: translateY(-6px) rotate(45deg);
+  top: 26px;
+  left: 5px;
+}
+.search__modal p {
+  text-align: center;
+  font-family: YuGothic;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1.4px;
+  padding: 60px 0 20px;
+}
+.search__modal-container {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #2ea7e0;
+  background-color: #fff;
+  box-shadow: 3px 3px 0px 0px #333;
+  padding: 3px 10px;
+  border-radius: 10px;
+  height: 45px;
+  width: 350px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.search__modal-container input[type="text"] {
+  border: none;
+  height: 38px;
+}
+.search__modal-container input[type="text"]:focus {
+  outline: 0;
+}
+.search__modal-container input[type="submit"] {
+  cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #2ea7e0;
+  position: absolute;
+  width: 52px;
+  height: 45px;
+  right: 0px;
+  top: 0px;
+  outline: none;
+}
+.search__modal-container i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  margin-top: -0.5em;
+  color: #fff;
+}
+.search__modal-container .fa-search {
+  font-size: 1.7rem; /* アイコンのサイズ変更 */
+}
 footer {
   background-color: #f0eae1;
   margin-top: 400px;
