@@ -229,13 +229,20 @@ li {
 .header__nav.active {
   top: 0;
 }
+.main__mv-slider {
+  z-index: 10;
+}
 .main__mv-img {
   width: 100%;
 }
 .site-concept {
-  margin-bottom: 30px;
   padding: 0 20px;
-  background-image: url();
+  background-image: url(../img/concept_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 500px;
+  margin: -300px 0 30px;
 }
 .site-concept p {
   color: #e73118;
@@ -243,15 +250,23 @@ li {
   font-weight: bold;
   letter-spacing: 0.5rem;
   line-height: 2;
-  margin-left: 35px;
+  /* margin-left: 35px;
+  padding-top: 350px; */
+  position: absolute;
+  top: 75%;
+  left: 7%;
 }
 .trip-themes {
   position: relative;
 }
-.trip-themes__title,
-.trip-themes__search-btn {
-  position: relative;
-  z-index: 1;
+.trip-themes__title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 .trip-themes__inner {
   padding: 0 20px;
@@ -261,18 +276,13 @@ li {
   font-weight: bold;
   font-family: "Toppan Bunkyu Midashi Gothic";
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   letter-spacing: 0.1rem;
-  position: relative;
-  left: 43%;
-  transform: translateX(-50%);
+  white-space: nowrap;
 }
 .trip-themes__search-btn {
   display: inline;
-  position: relative;
-  left: 4%;
-  padding-top: 5px;
   cursor: pointer;
 }
 .trip-themes__title.active {
@@ -281,9 +291,9 @@ li {
 .trip-themes__search-btn.active {
   display: none;
 }
- .trip-themes__item {
+.trip-themes__item {
   position: relative;
- }  
+}
 .trip-themes__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -325,10 +335,10 @@ li {
   z-index: 10;
 }
 .search__modal-inner {
-  border: 2px solid #2ea7e0;
-  width: 496px;
+  box-shadow: inset 0 0 0 2px #2ea7e0;
+  max-width: 500px;
+  width: 100%;
   height: 260px;
-  /* margin: auto; */
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -422,9 +432,123 @@ li {
 .search__modal-container .fa-search {
   font-size: 1.7rem; /* アイコンのサイズ変更 */
 }
+
+.columns {
+  text-align: center;
+  background-color: #e73118;
+  color: #fff;
+  /* height: 1034px; */
+  padding: 60px 20px 40px;
+}
+.columns__container {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  position: relative;
+  padding: 70px 0 50px;
+}
+.columns__header {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 12px 7px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  background: #2ea7e0;
+  font-family: YuGothic;
+  text-align: center;
+  white-space: nowrap;
+}
+.columns__header::before {
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: 45%;
+  transform: translateX(-45%);
+  border: 20px solid transparent;
+  border-top: 15px solid #2ea7e0;
+  transform: rotate(-90deg);
+}
+.columns__title {
+  font-family: "Toppan Bunkyu Midashi Gothic";
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: 1.6px;
+  margin-bottom: 35px;
+}
+.columns__img {
+  border-radius: 20px;
+  margin-bottom: 35px;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+.columns__text {
+  text-align: left;
+  padding: 0 10% 10%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: YuGothic;
+  letter-spacing: 0.1rem;
+}
+.columns__author {
+  margin-bottom: 15px;
+}
+.columns__description {
+  position: relative;
+  padding: 5% 16%;
+}
+.columns__description::before,
+.columns__description::after {
+  position: absolute;
+  content: "";
+  width: 14%;
+  aspect-ratio: 1.4 / 1;
+}
+.columns__description::before {
+  border-left: solid 1px;
+  border-top: solid 1px;
+  top: 0;
+  left: 0;
+}
+.columns__description::after {
+  border-right: solid 1px;
+  border-bottom: solid 1px;
+  bottom: 0;
+  right: 0;
+}
+.columns__btn {
+  background: #2ea7e0;
+  cursor: pointer;
+  width: 250px;
+  height: 60px;
+  border-radius: 100px;
+  box-shadow: 3px 3px 0px 0px #333;
+  margin: 5% auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.columns__btn:hover {
+  box-shadow: 1px 1px 0px 0px #333;
+  transform: translateY(3px);
+}
+.columns__btn a {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.1rem;
+}
+
+.splide__pagination__page.is-active {
+  background: #2ea7e0 !important; /* アクティブなドットの背景色 */
+}
 footer {
   background-color: #f0eae1;
-  margin-top: 400px;
   padding: 60px 20px 0;
   text-align: center;
 }
@@ -460,5 +584,25 @@ footer {
   }
   .background-right {
     display: none;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+  .trip-themes__title {
+    font-size: calc(1.2rem + 1vw);
+  }
+  .trip-themes__search-btn {
+    padding: 0;
+  }
+
+  .trip-themes__theme-title {
+    font-size: 0.9rem;
+  }
+  .trip-themes__theme-title span {
+    font-size: 1.5rem;
+  }
+  .search__modal {
+    width: 100%;
   }
 }

@@ -29,6 +29,14 @@ $(document).ready(function() {
         interval: 4000,
         pagination: false,
     }).mount();
+
+    new Splide('#splide-column', {
+        type: 'loop',
+        perPage: 1,
+        arrows : false,
+        autoplay: true,
+        interval: 5000,
+      }).mount();
 });
 
 
