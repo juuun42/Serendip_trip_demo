@@ -235,6 +235,13 @@ li {
 .main__mv-img {
   width: 100%;
 }
+/* mvスライドのarrowボタン変更 */
+.splide__arrow {
+  background: none  !important; /* 背景を削除 */
+}
+.splide__arrow svg {
+  fill: #fff !important; /* SVGの色を白に設定 */
+}
 .site-concept {
   padding: 0 20px;
   background-image: url(../img/concept_bg.png);
@@ -250,8 +257,6 @@ li {
   font-weight: bold;
   letter-spacing: 0.5rem;
   line-height: 2;
-  /* margin-left: 35px;
-  padding-top: 350px; */
   position: absolute;
   top: 75%;
   left: 7%;
