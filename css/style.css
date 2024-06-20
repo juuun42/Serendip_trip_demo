@@ -50,6 +50,9 @@ li {
   font-weight: bold;
   line-height: 1.5;
 }
+.background__nav-item a:hover {
+  color: #e73118;
+}
 .background__extra-items {
   margin-top: 30px;
 }
@@ -199,6 +202,9 @@ li {
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.5;
+}
+.header__nav-item a:hover {
+  color: #e73118;
 }
 .extra-nav-items {
   margin-top: 30px;
