@@ -317,6 +317,7 @@ li {
 }
 .main__mv-img {
   width: 100%;
+  display: block;
 }
 /* mvスライドのarrowボタン変更 */
 .splide__arrow {
@@ -687,6 +688,9 @@ footer {
 }
 .header.fixed{
   box-sizing: border-box;
+}
+.center-content {
+  border: none;
 }
   .trip-themes__title {
     font-size: calc(1.2rem + 1vw);
