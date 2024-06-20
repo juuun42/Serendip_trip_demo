@@ -70,6 +70,7 @@ li {
   max-width: 500px;
   width: 100%;
   background-color: #fff;
+  border: 1px solid #2ea7e0;
   margin: 0 auto;
 }
 .header {
@@ -78,15 +79,57 @@ li {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 460px; /* padding20px*2を考慮し、mainの最大幅に合わせる */
+  max-width: 500px; /* padding20px*2を考慮し、mainの最大幅に合わせる */
+  box-sizing: border-box;
   width: 100%;
   z-index: 9999;
 }
+.header__fixed-logo {
+  width: 35%;
+  display: none;
+}
+
+.header.fixed .header__logo {
+  display: none;
+}
+
+.header.fixed .header__fixed-logo {
+  display: block;
+}
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-bottom: 1px solid #2ea7e0;
+  max-width: 500px; /* padding20px*2を考慮し、mainの最大幅に合わせる */
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 9999;
+}
+/* #header.UpMove{
+  position: fixed;
+  width:100%;
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+} */
+
 .header__logo {
   display: flex;
   flex-direction: column;
@@ -637,6 +680,10 @@ footer {
 }
 .header__menu-inner {
   margin-right: 20px;
+}
+.header.fixed{
+  box-sizing: border-box;
+  border: 1px solid #2ea7e0;
 }
   .trip-themes__title {
     font-size: calc(1.2rem + 1vw);
