@@ -5,7 +5,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-html{
+html {
   overflow-x: hidden;
 }
 a {
@@ -68,7 +68,7 @@ li {
   line-height: 1.5;
   padding: 10px 0;
 }
-.background__extra-instagram-icon{
+.background__extra-instagram-icon {
   margin-top: 5px;
 }
 .center-content {
@@ -265,8 +265,8 @@ li {
   line-height: 1.5;
   padding: 10px 0;
 }
-.extra__instagram-icon{
-  margin-top: 10px ;
+.extra__instagram-icon {
+  margin-top: 10px;
 }
 .header__nav-openbtn {
   position: relative;
@@ -323,7 +323,7 @@ li {
 }
 /* mvスライドのarrowボタン変更 */
 .splide__arrow {
-  background: none  !important; /* 背景を削除 */
+  background: none !important; /* 背景を削除 */
 }
 .splide__arrow svg {
   fill: #fff !important; /* SVGの色を白に設定 */
@@ -680,20 +680,21 @@ footer {
   }
 
   .header {
-    padding: 10px 20px;
+    padding: 4%;
   }
-/* .header__menu-inner {
+  /* .header__menu-inner {
   margin-right: 20px;
 }  */
-.header.fixed{
-  box-sizing: border-box;
-}
-.header__nav-item a {
-  font-size: 1rem;
-}
-.center-content {
-  border: none;
-}
+  .header.fixed {
+    padding: 4%;
+    box-sizing: border-box;
+  }
+  .header__nav-item a {
+    font-size: 1rem;
+  }
+  .center-content {
+    border: none;
+  }
   .trip-themes__title {
     font-size: calc(1.2rem + 1vw);
   }
