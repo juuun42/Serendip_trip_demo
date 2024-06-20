@@ -41,5 +41,17 @@ $(document).ready(function() {
             header.classList.remove('fixed');
         }
     });
-    
+
+    // var header = document.querySelector('.header');
+    // var siteConcept = document.querySelector('.site-concept');
+
+    // window.addEventListener('scroll', function() {
+    //     var siteConceptPosition = siteConcept.getBoundingClientRect().top;
+
+    //     if (siteConceptPosition <= 0) {
+    //         header.classList.add('fixed');
+    //     } else {
+    //         header.classList.remove('fixed');
+    //     }
+    // });
 });

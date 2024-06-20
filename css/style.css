@@ -50,6 +50,7 @@ li {
 }
 .background__nav-item a {
   color: #2ea7e0;
+  font-family: "Toppan Bunkyu Midashi Gothic";
   font-size: 1.4vw;
   font-weight: bold;
   line-height: 1.5;
@@ -83,7 +84,7 @@ li {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 20px;
   position: fixed;
   top: 0;
   left: 50%;
@@ -246,6 +247,7 @@ li {
 
 .header__nav-item a {
   color: #2ea7e0;
+  font-family: "Toppan Bunkyu Midashi Gothic";
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.5;
@@ -343,7 +345,7 @@ li {
   line-height: 2;
   position: absolute;
   top: 75%;
-  left: 7%;
+  left: 50px;
 }
 .trip-themes {
   position: relative;
@@ -678,16 +680,16 @@ footer {
   }
 
   .header {
-    padding: 10px;
+    padding: 10px 20px;
   }
-  .header__logo {
-    margin-left: 20px;
-}
-.header__menu-inner {
+/* .header__menu-inner {
   margin-right: 20px;
-}
+}  */
 .header.fixed{
   box-sizing: border-box;
+}
+.header__nav-item a {
+  font-size: 1rem;
 }
 .center-content {
   border: none;
