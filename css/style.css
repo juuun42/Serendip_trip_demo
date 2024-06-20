@@ -146,7 +146,7 @@ li {
   color: #2ea7e0;
   font-weight: bold;
 }
-.header__btn-lang .header__btn-lang-text:hover {
+.header__btn-lang:hover .header__btn-lang-text {
   color: #fff;
 }
 
