@@ -3,6 +3,10 @@ body {
   /* background: #f0f0f0; */
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+html{
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -683,7 +687,6 @@ footer {
 }
 .header.fixed{
   box-sizing: border-box;
-  border: 1px solid #2ea7e0;
 }
   .trip-themes__title {
     font-size: calc(1.2rem + 1vw);
