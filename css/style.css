@@ -10,6 +10,7 @@ html {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 img {
   max-width: 100%;
@@ -95,7 +96,7 @@ li {
   z-index: 9999;
 }
 .header__fixed-logo {
-  width: 35%;
+  width: 140px;
   display: none;
 }
 
@@ -115,7 +116,7 @@ li {
   border-bottom: 1px solid #2ea7e0;
   max-width: 500px; /* padding20px*2を考慮し、mainの最大幅に合わせる */
   width: 100%;
-  padding: 10px 20px;
+  padding: 11px 20px 16px;
   z-index: 9999;
 }
 /* #header.UpMove{
@@ -153,7 +154,7 @@ li {
 .header__menu-inner {
   display: flex;
   justify-self: space-between;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
 }
 .header__btn-lang {
@@ -330,7 +331,7 @@ li {
 }
 .site-concept {
   padding: 0 20px;
-  background-image: url(../img/concept_bg.png);
+  /* background-image: url(../img/concept_bg.png); */
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -671,6 +672,644 @@ footer {
   letter-spacing: 0.045rem;
   padding-bottom: 40px;
 }
+
+/* アーカイブページ */
+.search-results {
+  margin-top: 95px;
+  text-align: center;
+  font-family: "Kozuka Gothic Pr6N";
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.125rem;
+  letter-spacing: 0.06875rem;
+  margin-bottom: 15px;
+}
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
+.filter-container__btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  line-height: 2.8rem;
+  color: #2ea7e0;
+  border-radius: 10px;
+  border: 1px solid #2ea7e0;
+  background: #fff;
+  box-shadow: 3px 3px 0px 0px #333;
+  padding: 3px 20px;
+  margin-bottom: 30px;
+}
+.filter-container__btn-icon {
+  margin-left: 18px;
+  width: 14px;
+}
+.area__modal {
+  position: fixed;
+  width: 500px;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.area__modal-inner {
+  /* box-shadow: inset 0 0 0 2px #2ea7e0; */
+  border: 1px solid #2ea7e0;
+  max-width: 500px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.area__modal.active {
+  display: block;
+}
+.area__close-container {
+  position: relative;
+}
+.area__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #2ea7e0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.area__close-btn span {
+  display: inline-block;
+  transition: all 0.8s;
+  position: absolute;
+  left: 8px;
+  height: 1px;
+  background: #2ea7e0;
+  width: 80%;
+}
+.area__close-btn span:nth-of-type(1) {
+  transform: translateY(6px) rotate(-45deg);
+  top: 13px;
+  left: 5px;
+}
+.area__close-btn span:nth-of-type(2) {
+  transform: translateY(-6px) rotate(45deg);
+  top: 26px;
+  left: 5px;
+}
+.area__modal p {
+  text-align: center;
+  font-family: YuGothic;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1.4px;
+  padding: 60px 0 40px;
+}
+
+.area__modal.active {
+  display: block;
+}
+
+.map {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cls-1 {
+  letter-spacing: -0.25em;
+}
+
+.cls-1,
+.cls-2 {
+  font-family: KozGoPr6N-Regular-83pv-RKSJ-H, "Kozuka Gothic Pr6N";
+}
+
+.cls-3 {
+  stroke-width: 1.44px;
+}
+
+.cls-3,
+.cls-4 {
+  fill: none;
+}
+
+.cls-3,
+.cls-5,
+.cls-6 {
+  stroke: #2ea7e0;
+}
+
+.cls-4,
+.cls-7 {
+  stroke-width: 0px;
+}
+
+.cls-5 {
+  fill: url(#_10_lpi_20_);
+}
+
+.cls-5,
+.cls-6 {
+  stroke-width: 3px;
+}
+
+.cls-8 {
+  letter-spacing: -0.18em;
+}
+
+.cls-8,
+.cls-9,
+.cls-10 {
+  font-family: Brother-1816-Bold, "Brother 1816";
+  font-weight: 700;
+}
+
+.cls-9,
+.cls-2 {
+  letter-spacing: -0.2em;
+}
+
+.cls-11 {
+  font-size: 1.2rem;
+}
+
+.cls-11,
+.cls-7,
+.cls-12 {
+  fill: #2ea7e0;
+}
+
+.cls-12 {
+  font-size: 1.25rem;
+}
+
+.cls-6 {
+  fill: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#aomori .cls-6,
+#towada .cls-6,
+#mutsu .cls-6,
+#gosho .cls-6,
+#hirosaki .cls-6,
+#shirakami .cls-6 {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+#aomori:hover .cls-6,
+#towada:hover .cls-6,
+#mutsu:hover .cls-6,
+#gosho:hover .cls-6,
+#hirosaki:hover .cls-6,
+#shirakami:hover .cls-6 {
+  fill: #2ea7e0;
+  stroke: white;
+}
+
+#aomori .cls-7,
+#towada .cls-7,
+#mutsu .cls-7,
+#gosho .cls-7,
+#hirosaki .cls-7,
+#shirakami .cls-7 {
+  transition: fill 0.3s ease;
+}
+#aomori:hover .cls-7,
+#gosho:hover .cls-7,
+#hirosaki:hover .cls-7,
+#towada:hover .cls-11,
+#mutsu:hover .cls-11,
+#shirakami:hover .cls-12 {
+  fill: #fff;
+}
+
+#towada:hover .cls-11,
+#mutsu:hover .cls-11,
+#shirakami:hover .cls-12 {
+  fill: #fff;
+}
+.map__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.map__labels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.map__label {
+  background-color: white;
+  color: #d63333;
+  font-size: 0.8rem;
+  font-family: "Kozuka Gothic Pr6N";
+  font-weight: 500;
+  border: 2px solid #2ea7e0;
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 200px;
+}
+
+.en.small {
+  font-size: 0.6rem; /* 中程度に小さいフォントサイズ */
+}
+
+.en.smaller {
+  font-size: 0.5rem; /* より小さいフォントサイズ */
+}
+.map__label:hover {
+  background-color: #2ea7e0;
+  color: white;
+}
+.map__label text {
+  fill: #d63333;
+}
+.map__label:hover text {
+  fill: white;
+}
+.highlight {
+  background-color: #2ea7e0;
+  color: white;
+}
+.map__label span {
+  display: inline-block;
+  margin: 3px 0; /* 余白をゼロに設定 */
+}
+.spot-list {
+  padding: 0 20px;
+}
+.spot-list__link {
+  color: #333;
+}
+.spot-list__item {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.spot-list__img-container {
+  overflow: hidden;
+  width: 50%;
+}
+
+.spot-list__thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.spot-list__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 10px 10px;
+}
+
+.spot-list__title {
+  font-size: 1.375rem;
+  font-family: "Kozuka Gothic Pr6N";
+  color: #359dd1;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6;
+  margin-bottom: 2px;
+}
+
+.spot-list__city {
+  font-size: 1rem;
+  width: 86px;
+  font-family: "Kozuka Gothic Pr6N";
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  line-height: 2;
+  color: #359dd1;
+  border: 1px solid #359dd1;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.spot-list__description {
+  font-size: 1rem;
+  font-family: "Kozuka Gothic Pr6N";
+  letter-spacing: 0.0625rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.spot-list__map-iframe {
+  width: 100%;
+  height: 90px;
+  padding: 0 5px;
+}
+
+/* 詳細ページ */
+.spot-details {
+  margin-top: 95px;
+}
+.spot-details__title {
+  color: #2ea7e0;
+  font-size: 1.375rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+.spot-details__description {
+  text-align: left;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+  line-height: 1.3;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.spot-details__tag-container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.spot-details__favorite-btn {
+  width: 12%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+.spot-details__favorite-btn img {
+  width: 100%;
+}
+.spot-details__tags {
+  color: #2ea7e0;
+  font-size: 1.125rem;
+  line-height: 2;
+  letter-spacing: 0, 05rem;
+  width: 88%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  margin-bottom: 24px;
+}
+.spot-details__tag {
+  border: 1px solid #2ea7e0;
+  padding: 0 20px;
+  border-radius: 50px;
+  white-space: nowrap;
+  text-align: center; 
+}
+
+.spot-details__slider {
+  padding: 0;
+  margin-bottom: 15px;
+}
+.spot-details__text{
+  padding: 0 20px;
+}
+.spot-details__introduction {
+  font-size: 1.125rem;
+  font-family: KozGoPr6N-Regular-83pv-RKSJ-H, "Kozuka Gothic Pr6N";
+  font-weight: 400;
+  letter-spacing: 0.125rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.spot-details__map {
+  max-height: 170px;
+  margin-bottom: 15px;
+}
+.spot-details__map iframe {
+  height: 100%;
+  width: 100%;
+}
+.spot-info {
+  border: 1px solid #2ea7e0;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 68px;
+}
+.spot-info__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spot-info__row {
+  border-top: 1px solid #2ea7e0;
+}
+
+.spot-info__row:first-child {
+  border-top: none;
+}
+.spot-info__label {
+  border-right: 1px solid #2ea7e0;
+  padding: 5px 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  font-family: KozGoPr6N-Regular-83pv-RKSJ-H, "Kozuka Gothic Pr6N";
+  font-weight: 500;
+  line-height: 2;
+  width: 30%;
+}
+.spot-info__value {
+  padding: 5px 7px;
+  text-align: left;
+  color: #000;
+  font-size: 1.rem;
+  font-family: KozGoPr6N-Regular-83pv-RKSJ-H, "Kozuka Gothic Pr6N";
+  font-weight: 500;
+  line-height: 2;
+  width: 70%;
+}
+.spot-info__map-link {
+  color: #2ea7e0;
+  text-decoration: none;
+  border: 1px solid #2ea7e0;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-left: 5px;
+}
+.nearby-spots__heading {
+  font-size: 1.375rem;
+  line-height: 1.6;
+  font-family: KozGoPr6N-Regular-83pv-RKSJ-H, "Kozuka Gothic Pr6N";;
+  font-weight: 700;
+  letter-spacing: 0.06875rem;
+  margin-bottom: 12px;
+}
+.nearby-spots__list {
+  display: flex;
+  overflow-x: auto;
+  gap: 32px;
+}
+.nearby-spots {
+  padding-left: 20px;
+}
+.nearby-spots__link {
+  color: #333;
+  flex-shrink: 0;
+}
+.nearby-spots__item {
+  display: flex;
+  overflow: hidden;
+  max-width: 400px;
+  margin-bottom: 60px;
+}
+
+.nearby-spots__img-container {
+  overflow: hidden;
+  width: 46%;
+}
+
+.nearby-spots__thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.nearby-spots__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 10px 10px;
+  width: 48%;
+}
+
+.nearby-spots__title {
+  font-size: 1.375rem;
+  font-family: "Kozuka Gothic Pr6N";
+  color: #359dd1;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6;
+  margin-bottom: 2px;
+}
+
+.nearby-spots__city {
+  font-size: 1rem;
+  width: 86px;
+  font-family: "Kozuka Gothic Pr6N";
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6;
+  color: #359dd1;
+  border: 1px solid #359dd1;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.nearby-spots__description {
+  font-size: 1rem;
+  font-family: "Kozuka Gothic Pr6N";
+  letter-spacing: 0.0625rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.nearby-spots__map-iframe {
+  width: 95%;
+  height: 60px;
+  padding: 0 5px;
+}
+.recommended-spots__heading {
+  font-size: 1.375rem;
+  line-height: 1.6;
+  font-family: KozGoPr6N-Regular-83pv-RKSJ-H, "Kozuka Gothic Pr6N";;
+  font-weight: 700;
+  letter-spacing: 0.06875rem;
+  margin-bottom: 12px;
+}
+.recommended-spots__list {
+  display: flex;
+  overflow-x: auto;
+  gap: 32px;
+}
+.recommended-spots {
+  padding-left: 20px;
+}
+.recommended-spots__link {
+  color: #333;
+  flex-shrink: 0;
+}
+.recommended-spots__item {
+  display: flex;
+  overflow: hidden;
+  width: 400px;
+  margin-bottom: 60px;
+}
+
+.recommended-spots__img-container {
+  overflow: hidden;
+  width: 46%;
+}
+
+.recommended-spots__thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.recommended-spots__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 10px 10px;
+  width: 48%;
+}
+
+.recommended-spots__title {
+  font-size: 1.375rem;
+  font-family: "Kozuka Gothic Pr6N";
+  color: #359dd1;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6;
+  margin-bottom: 2px;
+}
+
+.recommended-spots__city {
+  font-size: 1rem;
+  width: 86px;
+  font-family: "Kozuka Gothic Pr6N";
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  line-height: 1.6;
+  color: #359dd1;
+  border: 1px solid #359dd1;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.recommended-spots__description {
+  font-size: 1rem;
+  font-family: "Kozuka Gothic Pr6N";
+  letter-spacing: 0.0625rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.recommended-spots__map-iframe {
+  width: 95%;
+  height: 60px;
+  padding: 0 5px;
+}
 @media (max-width: 767px) {
   .background-left {
     display: none;
@@ -679,16 +1318,6 @@ footer {
     display: none;
   }
 
-  .header {
-    padding: 4%;
-  }
-  /* .header__menu-inner {
-  margin-right: 20px;
-}  */
-  .header.fixed {
-    padding: 4%;
-    box-sizing: border-box;
-  }
   .header__nav-item a {
     font-size: 1rem;
   }
@@ -708,7 +1337,100 @@ footer {
   .trip-themes__theme-title span {
     font-size: 1.5rem;
   }
+
   .search__modal {
     width: 100%;
+  }
+  .search-results {
+    font-size: 1.2rem;
+  }
+  .button-container__filter-button {
+    font-size: 1.375rem;
+  }
+  .spot-list__title {
+    font-size: 1.2rem;
+  }
+  .spot-list__city {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .spot-list__description {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+  }
+
+  .spot-list__map-iframe {
+    height: 70px;
+  }
+  .area__close-btn {
+    right: 0;
+  }
+  .area__modal {
+    width: 100%;
+  }
+  .area__modal p {
+    padding: 60px 0 30px;
+  }
+
+  .map__label {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  .en.small {
+    font-size: 0.5rem; /* 中程度に小さいフォントサイズ */
+  }
+
+  .en.smaller {
+    font-size: 0.4rem; /* より小さいフォントサイズ */
+  }
+  /* .spot-details__title {
+    font-size: 4.4vw;
+  }
+  .spot-details__description {
+    font-size: 4vw;
+  }  */
+  .spot-details__tag {
+    padding: 0 10px;
+  } 
+
+  .nearby-spots__item {
+    width: 80vw;
+  }
+  .nearby-spots__title {
+    font-size: 4.125vw;
+  }
+  .spot-details__tags {
+    font-size: 3.5vw;
+  }
+  .nearby-spots__city {
+    font-size: 3vw;
+  }
+  .nearby-spots__description{
+    font-size: 3vw;
+  }
+  .nearby-spots__map-iframe {
+    width: 38vw;
+    height: 50px;
+  }
+  .recommended-spots__item {
+    width: 80vw;
+  }
+  .recommended-spots__item {
+    width: 80vw;
+  }
+  .recommended-spots__title {
+    font-size: 4.125vw;
+  }
+
+  .recommended-spots__city {
+    font-size: 3vw;
+  }
+  .recommended-spots__description{
+    font-size: 3vw;
+  }
+  .recommended-spots__map-iframe {
+    width: 38vw;
+    height: 50px;
   }
 }

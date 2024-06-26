@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serendip trip</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="background-left"></div>
+      <div class="center-content">
+        <div class="header fixed">
+          <div class="header__logo">
+            <h1 class="header__site-title">
+              <a href="index.html"
+                ><img
+                  src="img/site-logo.png"
+                  alt="SERENDIP TRIP"
+                  class="header__logo-img"
+              /></a>
+            </h1>
+            <p class="header__tagline">AOMORI</p>
+          </div>
+          <div class="header__fixed-logo">
+            <h1 class="header__site-title">
+              <a href="index.html"
+                ><img
+                  src="img/header-logo.png"
+                  alt="SERENDIP TRIP"
+                  class="header__logo-img"
+              /></a>
+            </h1>
+          </div>
+          <div class="header__menu-inner">
+            <div class="header__btn-lang">
+              <a href="">
+                <svg
+                  class="header__btn-logo"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="Vector"
+                    d="M13.74 7.35031C13.74 10.8583 10.887 13.7039 7.37 13.7039C-1.07884 13.3678 -1.0755 1.33283 7.37 1C10.887 1 13.74 3.84566 13.74 7.35363V7.35031Z"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M7.37 13.7039C12.5821 13.4044 12.5788 1.29621 7.37 1"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M7.37001 13.7039C2.15788 13.4011 2.16122 1.29621 7.37001 1"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M7.37 1V13.6873"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M1 7.35034H13.7367"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M2.36142 3.42639H12.3786"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M2.36142 11.2775H12.3786"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                  <path
+                    id="Vector"
+                    d="M13.74 7.35031C13.74 10.8583 10.887 13.7039 7.37 13.7039C-1.07884 13.3678 -1.0755 1.33283 7.37 1C10.887 1 13.74 3.84566 13.74 7.35363V7.35031Z"
+                    stroke="#359DD1"
+                    stroke-width="0.75"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+                <span class="header__btn-lang-text">EN</span>
+              </a>
+            </div>
+            <div class="header__btn-mypage">
+              <a href="">
+                <img
+                  src="img/mypage-logo.svg"
+                  alt=""
+                  class="header__logo-mypage"
+                  width="20px"
+                  height="20px"
+                />
+                <span class="header__btn-mypage-text">MY PAGE</span>
+              </a>
+            </div>
+            <nav class="header__nav">
+              <div class="header__nav-logo">
+                <a href=""
+                  ><img
+                    src="img/header-logo.png"
+                    alt="serendip trip"
+                    class="backgroud__logo-img"
+                    width="40%"
+                /></a>
+              </div>
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="">HOME</a></li>
+                <li class="header__nav-item">
+                  <a href="">WHAT IS SERENDIP TRIP ?</a>
+                </li>
+                <li class="header__nav-item"><a href="">COLUMN</a></li>
+                <li class="header__nav-item"><a href="">MODEL COURSE</a></li>
+                <li class="header__nav-item"><a href="">ABOUT US</a></li>
+                <div class="extra-nav-items">
+                  <li class="extra__nav-item"><a href="">PRIVACY POLICY</a></li>
+                  <li class="extra__nav-item">
+                    <a href="">
+                      <img
+                        src="img/instagram_logo_extra.png"
+                        alt="Instagram Icon"
+                        class="extra__instagram-icon"
+                        width="30px"
+                        height="30px"
+                      />
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </nav>
+            <div class="header__nav-openbtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <main>
+          <article class="spot-details">
+            <h3 class="spot-details__title">
+              三上りんご園タイトルここまでいけますよ
+            </h3>
+            <p class="spot-details__description">
+              #りんごもぎが楽しめる #愉快なお父さん
+            </p>
+            <div class="spot-details__tag-container">
+              <div class="spot-details__tags">
+                <span class="spot-details__tag">おいらせ町</span>
+                <span class="spot-details__tag">歴史・文学・神社仏閣</span>
+                <span class="spot-details__tag">定番</span>
+                <span class="spot-details__tag">体験・ふれあい</span>
+              </div>
+              <div class="spot-details__favorite-btn">
+                <img src="img/fav.svg" alt="" width="40px" />
+              </div>
+            </div>
+            <div id="spot-details__slider" class="splide spot-details__slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img
+                      src="img/st_mv01.jpg"
+                      alt=""
+                      class="spot-details__mv-img"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="img/st_mv02.jpg"
+                      alt=""
+                      class="spot-details__mv-img"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="img/st_mv03.jpg"
+                      alt=""
+                      class="spot-details__mv-img"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="img/st_mv04.jpg"
+                      alt=""
+                      class="spot-details__mv-img"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="spot-details__text">
+              <div class="spot-details__introduction">
+                <p>
+                  紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文
+                  紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文
+                </p>
+              </div>
+              <div class="spot-details__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="spot-details__map-iframe"
+                ></iframe>
+              </div>
+
+              <div class="spot-info">
+                <table class="spot-info__table">
+                  <tr class="spot-info__row">
+                    <td class="spot-info__label">スポット名</td>
+                    <td class="spot-info__value">三上りんご園</td>
+                  </tr>
+                  <tr class="spot-info__row">
+                    <td class="spot-info__label">住所</td>
+                    <td class="spot-info__value">
+                      青森県弘前市1-2-3
+                      <a href="https://maps.app.goo.gl/vVhahfr3bS246LrB6?g_st=com.google.maps" class="spot-info__map-link">MAP</a>
+                    </td>
+                  </tr>
+                  <tr class="spot-info__row">
+                    <td class="spot-info__label">電話番号</td>
+                    <td class="spot-info__value">0172-77-7777</td>
+                  </tr>
+                  <tr class="spot-info__row">
+                    <td class="spot-info__label">営業時間</td>
+                    <td class="spot-info__value">月〜金 10:00-18:00</td>
+                  </tr>
+                  <tr class="spot-info__row">
+                    <td class="spot-info__label">その他</td>
+                    <td class="spot-info__value">
+                      「Serendip Tripを見た」で100円引き
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </article>
+          <div class="nearby-spots">
+            <h3 class="nearby-spots__heading">近くのスポット</h3>
+            <div class="nearby-spots__list">
+              <a href="" class="nearby-spots__link">
+                <div class="nearby-spots__item">
+                  <div class="nearby-spots__img-container">
+                    <img
+                      src="img/theme_01.png"
+                      alt=""
+                      class="nearby-spots__thumbnail"
+                    />
+                  </div>
+                  <div class="nearby-spots__content">
+                    <h3 class="nearby-spots__title">三上りんご園</h3>
+                    <div class="nearby-spots__city">弘前市</div>
+                    <p class="nearby-spots__description">
+                      #りんごもぎが楽しめる #愉快なお父さん...
+                    </p>
+                    <div class="nearby-spots__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="nearby-spots__map-iframe"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="nearby-spots__link">
+                <div class="nearby-spots__item">
+                  <div class="nearby-spots__img-container">
+                    <img
+                      src="img/theme_01.png"
+                      alt=""
+                      class="nearby-spots__thumbnail"
+                    />
+                  </div>
+                  <div class="nearby-spots__content">
+                    <h3 class="nearby-spots__title">三上りんご園</h3>
+                    <div class="nearby-spots__city">弘前市</div>
+                    <p class="nearby-spots__description">
+                      #りんごもぎが楽しめる #愉快なお父さん...
+                    </p>
+                    <div class="nearby-spots__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="nearby-spots__map-iframe"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="nearby-spots__link">
+                <div class="nearby-spots__item">
+                  <div class="nearby-spots__img-container">
+                    <img
+                      src="img/theme_01.png"
+                      alt=""
+                      class="nearby-spots__thumbnail"
+                    />
+                  </div>
+                  <div class="nearby-spots__content">
+                    <h3 class="nearby-spots__title">三上りんご園</h3>
+                    <div class="nearby-spots__city">弘前市</div>
+                    <p class="nearby-spots__description">
+                      #りんごもぎが楽しめる #愉快なお父さん...
+                    </p>
+                    <div class="nearby-spots__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="nearby-spots__map-iframe"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="recommended-spots">
+            <h3 class="recommended-spots__heading">
+              あなたにオススメのスポット
+            </h3>
+            <div class="recommended-spots__list">
+              <a href="" class="recommended-spots__link">
+                <div class="recommended-spots__item">
+                  <div class="recommended-spots__img-container">
+                    <img
+                      src="img/theme_01.png"
+                      alt=""
+                      class="recommended-spots__thumbnail"
+                    />
+                  </div>
+                  <div class="recommended-spots__content">
+                    <h3 class="recommended-spots__title">三上りんご園</h3>
+                    <div class="recommended-spots__city">弘前市</div>
+                    <p class="recommended-spots__description">
+                      #りんごもぎが楽しめる #愉快なお父さん...
+                    </p>
+                    <div class="recommended-spots__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="recommended-spots__map-iframe"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="recommended-spots__link">
+                <div class="recommended-spots__item">
+                  <div class="recommended-spots__img-container">
+                    <img
+                      src="img/theme_01.png"
+                      alt=""
+                      class="recommended-spots__thumbnail"
+                    />
+                  </div>
+                  <div class="recommended-spots__content">
+                    <h3 class="recommended-spots__title">三上りんご園</h3>
+                    <div class="recommended-spots__city">弘前市</div>
+                    <p class="recommended-spots__description">
+                      #りんごもぎが楽しめる #愉快なお父さん...
+                    </p>
+                    <div class="recommended-spots__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="recommended-spots__map-iframe"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="recommended-spots__link">
+                <div class="recommended-spots__item">
+                  <div class="recommended-spots__img-container">
+                    <img
+                      src="img/theme_01.png"
+                      alt=""
+                      class="recommended-spots__thumbnail"
+                    />
+                  </div>
+                  <div class="recommended-spots__content">
+                    <h3 class="recommended-spots__title">三上りんご園</h3>
+                    <div class="recommended-spots__city">弘前市</div>
+                    <p class="recommended-spots__description">
+                      #りんごもぎが楽しめる #愉快なお父さん...
+                    </p>
+                    <div class="recommended-spots__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f170.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="recommended-spots__map-iframe"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <img
+            src="img/header-logo.png"
+            alt="SERENDIP TRIP"
+            class="footer__logo"
+          />
+          <h2 class="footer__title">SERENDIP TRIP</h2>
+          <a href="" class="footer__instagram-btn">
+            <img
+              src="img/instagram_logo.png"
+              alt="Instagram Icon"
+              class="footer__instagram-icon"
+              width="50px"
+              height="50px"
+            />
+          </a>
+          <div class="footer__copyright">
+            &copy; SERENDIP TRIP All Rights Reserved.
+          </div>
+        </footer>
+      </div>
+      <div class="background-right">
+        <div class="background-right__inner">
+          <div class="background__logo">
+            <a href=""
+              ><img
+                src="img/header-logo.png"
+                alt="serendip trip"
+                class="backgroud__logo-img"
+                width="70%"
+            /></a>
+          </div>
+          <nav class="background__nav">
+            <ul class="background__nav-list">
+              <li class="background__nav-item"><a href="">HOME</a></li>
+              <li class="background__nav-item">
+                <a href="">WHAT IS SERENDIP TRIP ?</a>
+              </li>
+              <li class="background__nav-item"><a href="">COLUMN</a></li>
+              <li class="background__nav-item"><a href="">MODEL COURSE</a></li>
+              <li class="background__nav-item"><a href="">ABOUT US</a></li>
+              <div class="background__extra-items">
+                <li class="background__extra-item">
+                  <a href="">PRIVACY POLICY</a>
+                </li>
+                <li class="background__extra-item">
+                  <a href="">
+                    <img
+                      src="img/instagram_logo_extra.png"
+                      alt="Instagram Icon"
+                      class="background__extra-instagram-icon"
+                      width="25px"
+                      height="25px"
+                    />
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

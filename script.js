@@ -1,57 +1,87 @@
-$(document).ready(function() {
-    $(".header__nav-openbtn").click(function () {
-        $(this).toggleClass('active');
-        $(".header__nav").toggleClass('active');
-    });
+$(document).ready(function () {
+  $(".header__nav-openbtn").click(function () {
+    $(this).toggleClass("active");
+    $(".header__nav").toggleClass("active");
+  });
 
-    // テーマ検索モーダル
-    $(".trip-themes__search-btn").click(function () {
-        $(".search__modal").toggleClass('active');
-    });
+  // テーマ検索モーダル
+  $(".trip-themes__search-btn").click(function () {
+    $(".search__modal").toggleClass("active");
+  });
 
-    $(".search__close-btn").click(function () {
-        $(".search__modal").removeClass('active');
-    });
+  $(".search__modal").click(function () {
+    $(this).removeClass("active");
+  });
 
-    new Splide('.splide', {
-        type   : 'loop',
-        perPage: 1,
-        arrows : true,
-        autoplay: true,
-        interval: 4000,
-        pagination: false,
-    }).mount();
+  //エリア絞り込みモーダル
+  $(".filter-container__btn").click(function () {
+    $(".area__modal").toggleClass("active");
+  });
 
-    new Splide('#splide-column', {
-        type: 'loop',
-        perPage: 1,
-        arrows : false,
-        autoplay: true,
-        interval: 5000,
-    }).mount();
+  $(".area__close-btn").click(function () {
+    $(".area__modal").removeClass("active");
+  });
 
-    var header = document.querySelector('.header');
-    var windowHeight = window.innerHeight;
-    var scrollThreshold = windowHeight * 0.4;
+  $(".map__block").click(function () {
+    $(".area__modal").removeClass("active");
+  });
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > scrollThreshold) {
-            header.classList.add('fixed');
-        } else {
-            header.classList.remove('fixed');
-        }
-    });
+  $(".map__label").click(function () {
+    $(".area__modal").removeClass("active");
+    $(".map__label").removeClass("highlight"); // 以前のハイライトを削除
+    $(this).addClass("highlight"); // クリックした要素にハイライトを追加
+  });
 
-    // var header = document.querySelector('.header');
-    // var siteConcept = document.querySelector('.site-concept');
+  // topページmvのsplide設定
+  new Splide(".splide", {
+    type: "loop",
+    perPage: 1,
+    arrows: true,
+    autoplay: true,
+    interval: 4000,
+    pagination: false,
+  }).mount();
 
-    // window.addEventListener('scroll', function() {
-    //     var siteConceptPosition = siteConcept.getBoundingClientRect().top;
+  // コラムのsplide設定
+  new Splide(".splide-column", {
+    type: "loop",
+    perPage: 1,
+    arrows: true,
+    autoplay: true,
+    interval: 4000,
+  }).mount();
 
-    //     if (siteConceptPosition <= 0) {
-    //         header.classList.add('fixed');
-    //     } else {
-    //         header.classList.remove('fixed');
-    //     }
-    // });
+  // コラムのsplide設定
+  new Splide(".spot-details__slider", {
+    type: "loop",
+    perPage: 1,
+    arrows: false,
+    autoplay: true,
+    interval: 4000,
+  }).mount();
+
+  var header = document.querySelector(".header");
+  var windowHeight = window.innerHeight;
+  var scrollThreshold = windowHeight * 0.4;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > scrollThreshold) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  });
+
+  // var header = document.querySelector('.header');
+  // var siteConcept = document.querySelector('.site-concept');
+
+  // window.addEventListener('scroll', function() {
+  //     var siteConceptPosition = siteConcept.getBoundingClientRect().top;
+
+  //     if (siteConceptPosition <= 0) {
+  //         header.classList.add('fixed');
+  //     } else {
+  //         header.classList.remove('fixed');
+  //     }
+  // });
 });
