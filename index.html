@@ -14,6 +14,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bma5rja",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
@@ -36,7 +67,12 @@
           </div>
           <div class="header__fixed-logo">
             <h1 class="header__site-title">
-              <a href=""><img src="img/header-logo.png" alt="SERENDIP TRIP" class="header__logo-img" /></a>
+              <a href=""
+                ><img
+                  src="img/header-logo.png"
+                  alt="SERENDIP TRIP"
+                  class="header__logo-img"
+              /></a>
             </h1>
           </div>
           <div class="header__menu-inner">
@@ -176,7 +212,7 @@
               <input
                 type="text"
                 size="50"
-                placeholder="青森市,コーヒー,ねぶた etc."
+                placeholder="青森市, コーヒー, ねぶた etc."
               />
               <input type="submit" value="" />
               <i class="fas fa-search"></i>
@@ -203,11 +239,11 @@
             </div>
           </div>
           <div class="site-concept">
-            <p>よつばのクローバーは<br>旅人を待っている。</p>
+            <p>よつばのクローバーは<br />旅人を待っている。</p>
           </div>
           <section class="trip-themes">
             <div class="trip-themes__title-container">
-              <h2 class="trip-themes__title">Explore your interest</h2>
+              <h2 class="trip-themes__title">CLIP YOUR TRIP</h2>
               <img
                 src="img/search-btn.png"
                 alt=""
@@ -218,7 +254,11 @@
             </div>
             <div class="trip-themes__inner">
               <div class="trip-themes__list">
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_01.png"
@@ -226,11 +266,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      定番<br><span>POPULAR</span>
+                      定番<br /><span>POPULAR</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_02.png"
@@ -238,11 +282,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      アート<br><span>ART</span>
+                      アート<br /><span>ART</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_03.png"
@@ -250,11 +298,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      食体験<br><span>FOOD</span>
+                      食体験<br /><span>FOOD</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_04.png"
@@ -262,11 +314,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      歴史・文学・神社仏閣<br><span>HISTORY</span>
+                      歴史・文学・神社仏閣<br /><span>HISTORY</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_05.png"
@@ -274,11 +330,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      祭り<br><span>FESTIVAL</span>
+                      祭り<br /><span>FESTIVAL</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_06.png"
@@ -286,11 +346,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      自然・絶景<br><span>NATURE</span>
+                      自然・絶景<br /><span>NATURE</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_07.png"
@@ -298,11 +362,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      宿<br><span>ACCOMMO DATION</span>
+                      宿<br /><span>ACCOMMO DATION</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_08.png"
@@ -310,11 +378,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      伝統工芸<br><span>CRAFTS</span>
+                      伝統工芸<br /><span>CRAFTS</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_09.png"
@@ -322,11 +394,15 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      土産<br><span>SOUVENIR</span>
+                      土産<br /><span>SOUVENIR</span>
                     </h3>
                   </div>
                 </a>
-                <a href="archive.html" data-page="archive.html" class="trip-themes__link">
+                <a
+                  href="archive.html"
+                  data-page="archive.html"
+                  class="trip-themes__link"
+                >
                   <div class="trip-themes__item">
                     <img
                       src="img/theme_10.png"
@@ -334,7 +410,7 @@
                       class="trip-themes__thumbnail"
                     />
                     <h3 class="trip-themes__theme-title">
-                      体験・ふれあい<br><span>LOCAL ACTIVITY</span>
+                      体験・ふれあい<br /><span>LOCAL ACTIVITY</span>
                     </h3>
                   </div>
                 </a>
@@ -380,37 +456,75 @@
                   <ul class="splide__list">
                     <li class="splide__slide">
                       <a href="">
-                        <img src="img/column01.png" alt="" class="columns__img" width="500" height="500">
+                        <img
+                          src="img/column01.png"
+                          alt=""
+                          class="columns__img"
+                          width="500"
+                          height="500"
+                        />
                       </a>
                       <div class="columns__text">
-                        <div class="columns__author">写真家<br>@@@@さん (@@市在住)</div>
-                        <div class="columns__description">青森の純喫茶をめぐりませんか</div>
+                        <div class="columns__author">
+                          写真家<br />@@@@さん (@@市在住)
+                        </div>
+                        <div class="columns__description">
+                          青森の純喫茶をめぐりませんか
+                        </div>
                       </div>
                     </li>
                     <li class="splide__slide">
                       <a href="">
-                        <img src="img/theme_01.png" alt="" class="columns__img" width="500px" height="500px">
+                        <img
+                          src="img/theme_01.png"
+                          alt=""
+                          class="columns__img"
+                          width="500px"
+                          height="500px"
+                        />
                       </a>
                       <div class="columns__text">
-                        <div class="columns__author">####<br>(Resident of ## City)</div>
-                        <div class="columns__description">りんごの楽園・青森！りんごにまつわる必訪スポット5選</div>
+                        <div class="columns__author">
+                          ####<br />(Resident of ## City)
+                        </div>
+                        <div class="columns__description">
+                          りんごの楽園・青森！りんごにまつわる必訪スポット5選
+                        </div>
                       </div>
                     </li>
                     <li class="splide__slide">
                       <a href="">
-                        <img src="img/theme_02.png" alt="" class="columns__img" width="500" height="500">
+                        <img
+                          src="img/theme_02.png"
+                          alt=""
+                          class="columns__img"
+                          width="500"
+                          height="500"
+                        />
                       </a>
                       <div class="columns__text">
-                        <div class="columns__author">写真家<br>%%%%さん (%%市在住)</div>
-                        <div class="columns__description">Aomori art trip that stimulates the five senses</div>
+                        <div class="columns__author">
+                          写真家<br />%%%%さん (%%市在住)
+                        </div>
+                        <div class="columns__description">
+                          Aomori art trip that stimulates the five senses
+                        </div>
                       </div>
                     </li>
                     <li class="splide__slide">
                       <a href="">
-                        <img src="img/theme_03.png" alt="" class="columns__img" width="500" height="500">
+                        <img
+                          src="img/theme_03.png"
+                          alt=""
+                          class="columns__img"
+                          width="500"
+                          height="500"
+                        />
                       </a>
                       <div class="columns__text">
-                        <div class="columns__author">写真家<br>****さん (**市在住)</div>
+                        <div class="columns__author">
+                          写真家<br />****さん (**市在住)
+                        </div>
                         <div class="columns__description">青森の海鮮めぐり</div>
                       </div>
                     </li>
@@ -429,11 +543,7 @@
             alt="SERENDIP TRIP"
             class="footer__logo"
           />
-          <h2 class="footer__title">SERENDIP TRIP</h2>
-          <a
-            href=""
-            class="footer__instagram-btn"
-          >
+          <a href="" class="footer__instagram-btn">
             <img
               src="img/instagram_logo.png"
               alt="Instagram Icon"
@@ -468,7 +578,9 @@
               <li class="background__nav-item"><a href="">MODEL COURSE</a></li>
               <li class="background__nav-item"><a href="">ABOUT US</a></li>
               <div class="background__extra-items">
-                <li class="background__extra-item"><a href="">PRIVACY POLICY</a></li>
+                <li class="background__extra-item">
+                  <a href="">PRIVACY POLICY</a>
+                </li>
                 <li class="background__extra-item">
                   <a href="">
                     <img

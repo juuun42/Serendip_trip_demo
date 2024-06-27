@@ -1,12 +1,58 @@
 body {
-  font-family: Arial, sans-serif;
-  /* background: #f0f0f0; */
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 html {
   overflow-x: hidden;
+}
+/* Toppan Bunkyu Midashi Go StdN */
+.toppan-midashi {
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+/* Toppan BunkyuGothicPr6N R */
+.toppan-gothic-r {
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Toppan BunkyuGothicPr6N DB */
+.toppan-gothic-db {
+  font-family: "toppan-bunkyu-gothic-pr6n", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+/* Brother 1816/Bold */
+.brother-bold {
+  font-family: "brother-1816", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* Noto Sans CJK JP/Black */
+.noto-sans-black {
+  font-family: "noto-sans-cjk-jp", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+/* Kozuka Gothic Pr6N R */
+.kozuka-r {
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Kozuka Gothic Pr6N M */
+.kozuka-m {
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+/* Kozuka Gothic Pr6N B */
+.kozuka-b {
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 a {
   text-decoration: none;
@@ -90,7 +136,8 @@ li {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 500px; /* padding20px*2を考慮し、mainの最大幅に合わせる */
+  transition: .5s;
+  max-width: 500px; 
   box-sizing: border-box;
   width: 100%;
   z-index: 9999;
@@ -112,9 +159,10 @@ li {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  transition: .5s;
   background-color: #fff;
   border-bottom: 1px solid #2ea7e0;
-  max-width: 500px; /* padding20px*2を考慮し、mainの最大幅に合わせる */
+  max-width: 500px;
   width: 100%;
   padding: 11px 20px 16px;
   z-index: 9999;
@@ -248,9 +296,10 @@ li {
 
 .header__nav-item a {
   color: #2ea7e0;
-  font-family: "Toppan Bunkyu Midashi Gothic";
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   font-size: 1.4rem;
-  font-weight: bold;
   line-height: 1.5;
 }
 .header__nav-item a:hover {
@@ -262,7 +311,7 @@ li {
 .extra-nav-items a {
   color: #606060;
   font-size: 1rem;
-  font-weight: bold;
+  font-family: Inter;
   line-height: 1.5;
   padding: 10px 0;
 }
@@ -340,8 +389,9 @@ li {
 }
 .site-concept p {
   color: #e73118;
-  font-weight: 1.3rem;
-  font-weight: bold;
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   letter-spacing: 0.5rem;
   line-height: 2;
   position: absolute;
@@ -353,11 +403,9 @@ li {
 }
 .trip-themes__title-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 5%;
-  padding: 0 20px;
-  margin: 0 auto;
+  padding: 0 40px;
   box-sizing: border-box;
 }
 .trip-themes__inner {
@@ -365,12 +413,14 @@ li {
 }
 .trip-themes__title {
   color: #e73118;
-  font-weight: bold;
-  font-family: "Toppan Bunkyu Midashi Gothic";
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   display: inline-block;
-  font-size: 1.8rem;
-  line-height: 1.5;
+  font-size: 2rem;
+  line-height: 1.4;
   letter-spacing: 0.1rem;
+  padding-left: 10%;
   white-space: nowrap;
 }
 .trip-themes__search-btn {
@@ -403,15 +453,19 @@ li {
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
-  font-family: "Noto Sans JP";
-  font-size: 1rem;
+  font-family: "noto-sans-cjk-jp", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.1rem;
   line-height: 1.3;
   letter-spacing: 0.9px;
   white-space: nowrap;
 }
 .trip-themes__theme-title span {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.375rem;
+  font-family: "brother-1816", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   display: inline-block;
   white-space: normal;
 }
@@ -419,7 +473,7 @@ li {
 /* 検索画面 */
 
 .search__modal {
-  background-color: rgba(217, 210, 210, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   width: 500px;
   height: 100%;
@@ -436,7 +490,7 @@ li {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
 }
 .search__modal.active {
   display: block;
@@ -476,9 +530,10 @@ li {
 }
 .search__modal p {
   text-align: center;
-  font-family: YuGothic;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 1.6rem;
-  font-weight: bold;
   line-height: 1.5;
   letter-spacing: 1.4px;
   padding: 60px 0 20px;
@@ -531,14 +586,13 @@ li {
   text-align: center;
   background-color: #e73118;
   color: #fff;
-  /* height: 1034px; */
-  padding: 60px 20px 40px;
+  padding: 62px 20px 44px;
 }
 .columns__container {
   border: 1px solid #fff;
   border-radius: 20px;
   position: relative;
-  padding: 70px 0 50px;
+  padding: 66px 0 44px;
 }
 .columns__header {
   position: absolute;
@@ -552,7 +606,9 @@ li {
   line-height: 1.5;
   letter-spacing: 1px;
   background: #2ea7e0;
-  font-family: YuGothic;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   text-align: center;
   white-space: nowrap;
 }
@@ -569,10 +625,12 @@ li {
 .columns__title {
   font-family: "Toppan Bunkyu Midashi Gothic";
   font-size: 2rem;
-  font-weight: bold;
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   line-height: 1.3;
   letter-spacing: 1.6px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .columns__img {
   border-radius: 20px;
@@ -586,7 +644,9 @@ li {
   padding: 0 10% 10%;
   font-size: 1.5rem;
   line-height: 1.5;
-  font-family: YuGothic;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   letter-spacing: 0.1rem;
 }
 .columns__author {
@@ -594,7 +654,7 @@ li {
 }
 .columns__description {
   position: relative;
-  padding: 5% 16%;
+  padding: 5% 14%;
 }
 .columns__description::before,
 .columns__description::after {
@@ -621,56 +681,56 @@ li {
   width: 250px;
   height: 60px;
   border-radius: 100px;
-  box-shadow: 3px 3px 0px 0px #333;
   margin: 5% auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.columns__btn:hover {
-  box-shadow: 1px 1px 0px 0px #333;
-  transform: translateY(3px);
-}
 .columns__btn a {
   color: #fff;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 1.5rem;
   line-height: 2.25rem;
   letter-spacing: 0.1rem;
 }
 
+/* コラムスライダー設定 */
 .splide__pagination__page.is-active {
   background: #2ea7e0 !important; /* アクティブなドットの背景色 */
 }
+/* #splide-column .splide__arrow {
+  top: calc(50% + 40px); 
+  transform: translateY(-50%);
+} */
 footer {
   background-color: #f0eae1;
   padding: 60px 20px 0;
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .footer__logo {
-  margin-bottom: 30px;
+  width: 51.6%;
+  height: 100%;
+  margin: 0 auto;
 }
-.footer__title {
-  font-family: YuGothic;
-  font-size: 1.3rem;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 1.5;
-  letter-spacing: 0.075rem;
-  margin-bottom: 20px;
-}
+
 .footer__instagram-icon {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .footer__copyright {
   color: #2ea7e0;
   text-align: center;
-  font-family: YuGothic;
-  font-size: 0.7rem;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-weight: bold;
+  font-size: 0.7rem;
   line-height: 2;
   letter-spacing: 0.045rem;
-  padding-bottom: 40px;
+  padding-bottom: 88px;
 }
 
 /* アーカイブページ */
