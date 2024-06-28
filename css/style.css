@@ -263,14 +263,18 @@ li {
   align-items: center;
   position: absolute;
   top: 3px;
-  left: 7px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .header__btn-mypage-text {
   margin-top: 2px;
   font-size: 0.3rem;
   color: #2ea7e0;
-  font-weight: bold;
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  white-space: nowrap;
 }
 
 .header__nav {
@@ -477,10 +481,13 @@ li {
   position: fixed;
   width: 500px;
   height: 100%;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 .search__modal-inner {
   box-shadow: inset 0 0 0 2px #2ea7e0;
@@ -488,13 +495,21 @@ li {
   width: 100%;
   height: 260px;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 1);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .search__modal.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
+
+.search__modal.active .search__modal-inner {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .search__close-container {
   position: relative;
 }
@@ -890,12 +905,12 @@ footer {
   letter-spacing: -0.18em;
 }
 
-.cls-8,
+/* .cls-8,
 .cls-9,
 .cls-10 {
   font-family: Brother-1816-Bold, "Brother 1816";
   font-weight: 700;
-}
+} */
 
 .cls-9,
 .cls-2 {
@@ -938,7 +953,7 @@ footer {
 #hirosaki:hover .cls-6,
 #shirakami:hover .cls-6 {
   fill: #2ea7e0;
-  stroke: white;
+  /* stroke: white; */
 }
 
 #aomori .cls-7,

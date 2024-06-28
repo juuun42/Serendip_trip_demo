@@ -9,9 +9,10 @@ $(document).ready(function () {
     $(".search__modal").toggleClass("active");
   });
 
-  $(".search__modal").click(function () {
-    $(this).removeClass("active");
+  $(".search__close-btn").click(function () {
+    $(".search__modal").removeClass("active");
   });
+
 
   //エリア絞り込みモーダル
   $(".filter-container__btn").click(function () {
@@ -61,18 +62,27 @@ $(document).ready(function () {
   }).mount();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var header = document.querySelector('.header');
-    var siteConcept = document.querySelector('.site-concept');
+document.addEventListener("DOMContentLoaded", function () {
+  var header = document.querySelector(".header");
+  var siteConcept = document.querySelector(".site-concept");
 
-    window.addEventListener('scroll', function() {
-        var siteConceptBottom = siteConcept.getBoundingClientRect().bottom;
+  window.addEventListener("scroll", function () {
+    var siteConceptBottom = siteConcept.getBoundingClientRect().bottom;
 
-        if (siteConceptBottom <= 0) {
-            header.classList.add('fixed');
-        } else {
-            header.classList.remove('fixed');
-        }
-    });
+    if (siteConceptBottom <= 0) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
+  });
 });
-  
+
+$(document).click(function(event) {
+    // モーダルの外側をクリックした場合
+    if (!$(event.target).closest('.search__modal-inner').length && !$(event.target).closest('.trip-themes__search-btn').length) {
+        if ($(".search__modal").hasClass("active")) {
+            $(".search__modal").removeClass("active");
+        }
+    }
+});
+
