@@ -378,9 +378,16 @@ li {
 /* mvスライドのarrowボタン変更 */
 .splide__arrow {
   background: none !important; /* 背景を削除 */
+  font-size: 15px; 
 }
 .splide__arrow svg {
   fill: #fff !important; /* SVGの色を白に設定 */
+}
+.splide__arrow--prev {
+  left: 1em;
+}
+.splide__arrow--next {
+  transform: translateX(50%);
 }
 .site-concept {
   padding: 0 20px;
@@ -718,10 +725,16 @@ li {
 .splide__pagination__page.is-active {
   background: #2ea7e0 !important; /* アクティブなドットの背景色 */
 }
-/* #splide-column .splide__arrow {
-  top: calc(50% + 40px); 
-  transform: translateY(-50%);
-} */
+#splide-column .splide__arrow {
+  top: calc(50% + 30px); 
+  font-size: 25px; 
+}
+#splide-column .splide__arrow--prev {
+  transform: translateX(-50%);
+}
+#splide-column .splide__arrow--next {
+  transform: translateX(50%);
+}
 footer {
   background-color: #f0eae1;
   padding: 60px 20px 0;
@@ -1416,7 +1429,10 @@ footer {
   .trip-themes__theme-title span {
     font-size: 1.5rem;
   }
-
+  #splide-column .splide__arrow {
+    top: calc(50% - 15px); 
+    font-size: 20px; 
+  }
   .search__modal {
     width: 100%;
   }
