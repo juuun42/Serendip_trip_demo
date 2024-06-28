@@ -735,6 +735,7 @@ footer {
 
 .footer__instagram-icon {
   margin-bottom: 10px;
+  width: 80px;
 }
 .footer__copyright {
   color: #2ea7e0;
