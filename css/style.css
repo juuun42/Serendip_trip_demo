@@ -132,7 +132,7 @@ li {
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
