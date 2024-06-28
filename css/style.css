@@ -450,6 +450,9 @@ li {
 .trip-themes__thumbnail {
   border-radius: 20px;
 }
+.trip-themes__item:hover .trip-themes__thumbnail {
+  opacity: 0.5;
+}
 .trip-themes__theme-title {
   position: absolute;
   top: 50%;
