@@ -1,10 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-}
-html {
-  overflow-x: hidden;
 }
 /* Toppan Bunkyu Midashi Go StdN */
 .toppan-midashi {
@@ -121,6 +117,7 @@ li {
 .center-content {
   max-width: 500px;
   width: 100%;
+  contain: paint;
   background-color: #fff;
   border: 1px solid #2ea7e0;
   margin: 0 auto;
@@ -167,22 +164,6 @@ li {
   padding: 11px 20px 16px;
   z-index: 9999;
 }
-/* #header.UpMove{
-  position: fixed;
-  width:100%;
-  animation: UpAnime 0.5s forwards;
-}
-
-@keyframes UpAnime{
-  from {
-    opacity: 1;
-  transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-  transform: translateY(-100px);
-  }
-} */
 
 .header__logo {
   display: flex;
@@ -378,25 +359,49 @@ li {
 /* mvスライドのarrowボタン変更 */
 .splide__arrow {
   background: none !important; /* 背景を削除 */
-  font-size: 15px; 
+  font-size: 25px; 
 }
 .splide__arrow svg {
   fill: #fff !important; /* SVGの色を白に設定 */
 }
-.splide__arrow--prev {
-  left: 1em;
+#main__mv-slider .splide__arrow--prev {
+  left: -10px !important; /* 矢印を左端に寄せる */
 }
-.splide__arrow--next {
-  transform: translateX(50%);
+#main__mv-slider .splide__arrow--next {
+  right: -10px !important; /* 矢印を右端に寄せる */
+}
+.main__mv-slider {
+  position: relative;
+}
+.main__spot-name {
+  position: absolute;
+  bottom: 50px;
+  right: 52px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0 25px;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 0.04375rem;
+}
+.scroll-container {
+  margin-top: -60px;
+}
+.scroll-container__sticky {
+  position: sticky;
+  top: 270px;
+  padding-left: 15px;
+  z-index: 9998;
 }
 .site-concept {
-  padding: 0 20px;
   /* background-image: url(../img/concept_bg.png); */
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  height: 500px;
-  margin: -300px 0 30px;
+  /* height: 500px;
+  margin: -300px 0 30px; */
 }
 .site-concept p {
   color: #e73118;
@@ -405,9 +410,11 @@ li {
   font-style: normal;
   letter-spacing: 0.5rem;
   line-height: 2;
-  position: absolute;
+  padding: 80px 0 100px 50px;
+  /* position: absolute;
   top: 75%;
-  left: 50px;
+  left: 50px; */
+
 }
 .trip-themes {
   position: relative;
@@ -489,9 +496,9 @@ li {
 .search__modal {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -504,7 +511,9 @@ li {
   max-width: 500px;
   width: 100%;
   height: 260px;
-  position: relative;
+  position: fixed;
+  top: 50vh;
+  transform: translate(-50vh, 0);
   background-color: rgba(255, 255, 255, 1);
   opacity: 0;
   transform: scale(0.95);
@@ -519,7 +528,6 @@ li {
   opacity: 1;
   transform: scale(1);
 }
-
 .search__close-container {
   position: relative;
 }
@@ -579,6 +587,7 @@ li {
 .search__modal-container input[type="text"] {
   border: none;
   height: 38px;
+  font-size: 1rem;
 }
 .search__modal-container input[type="text"]:focus {
   outline: 0;
@@ -805,7 +814,7 @@ footer {
 .area__modal {
   position: fixed;
   width: 500px;
-  height: 100vh;
+  height: 100%;
   display: none;
   justify-content: center;
   align-items: center;
@@ -816,7 +825,7 @@ footer {
   border: 1px solid #2ea7e0;
   max-width: 500px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -1415,6 +1424,9 @@ footer {
   }
   .center-content {
     border: none;
+  }
+  .scroll-container__sticky {
+    top: 180px;
   }
   .trip-themes__title {
     font-size: calc(1.2rem + 1vw);

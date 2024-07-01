@@ -7,6 +7,10 @@ $(document).ready(function () {
   // テーマ検索モーダル
   $(".trip-themes__search-btn").click(function () {
     $(".search__modal").toggleClass("active");
+    
+    setTimeout(function() {
+      $("#search-input").focus();
+    }, 100);
   });
 
   $(".search__close-btn").click(function () {
@@ -38,6 +42,7 @@ $(document).ready(function () {
     type: "loop",
     perPage: 1,
     arrows: true,
+    arrowPath: 'M0.00400019 20.488L15.992 11.78L0.00400019 3.1L1.264 0.888L21.424 11.78L1.264 22.7L0.00400019 20.488Z',
     autoplay: true,
     interval: 4000,
     pagination: false,
@@ -62,6 +67,7 @@ $(document).ready(function () {
   }).mount();
 });
 
+// スクロール時にヘッダーを固定
 document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".header");
   var siteConcept = document.querySelector(".site-concept");
