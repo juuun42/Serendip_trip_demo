@@ -65,9 +65,10 @@ $(document).ready(function () {
     autoplay: true,
     interval: 4000,
   }).mount();
+
 });
 
-// スクロール時にヘッダーを固定
+//スクロール時にヘッダーを固定
 document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".header");
   var siteConcept = document.querySelector(".site-concept");
