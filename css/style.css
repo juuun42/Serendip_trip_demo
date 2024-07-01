@@ -412,7 +412,8 @@ main {
   font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.675rem;
   line-height: 2;
   padding: 80px 0 100px 50px;
   /* position: absolute;
