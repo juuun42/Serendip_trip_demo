@@ -170,6 +170,9 @@ li {
   display: flex;
   flex-direction: column;
 }
+.header__logo-img {
+  width: 107px;
+}
 
 .header__tagline {
   order: -1;
