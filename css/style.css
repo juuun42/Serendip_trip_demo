@@ -89,17 +89,29 @@ li {
 .background__logo {
   margin-bottom: 50px;
 }
-.background__nav-item {
-  padding: 3px 0;
-}
 .background__nav-item a {
   color: #2ea7e0;
-  font-family: "Toppan Bunkyu Midashi Gothic";
-  font-size: 1.4vw;
+  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: clamp(0.8rem, 1.4vw, 1.5rem); 
+  display: block;
+  padding-bottom: 12px;
+}
+.background__nav-item span {
+  color: #2ea7e0;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: clamp(0.4rem, 0.8vw, 0.875rem); 
   font-weight: bold;
+  display: block;
   line-height: 1.5;
 }
 .background__nav-item a:hover {
+  color: #e73118;
+}
+.background__nav-item a:hover span {
   color: #e73118;
 }
 .background__extra-items {
@@ -190,56 +202,22 @@ li {
   gap: 6px;
   align-items: center;
 }
-.header__btn-lang {
-  position: relative;
-  border: solid 1px #2ea7e0;
-  background: #fff;
-  cursor: pointer;
-  width: 45px;
-  height: 25px;
-  border-radius: 100px;
+.header__btn-lang:hover .header__btn-logo rect {
+  fill: #e73118;
+  stroke: #e73118;
 }
-.header__btn-lang:hover {
-  border: solid 1px #e73118;
-  background: #e73118;
-  color: #fff;
-}
-.header__btn-lang a {
-  position: absolute;
-  top: 5.5px;
-  left: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
+.header__btn-lang:hover .stroke-white {
+  stroke: #fff;
 }
 
-.header__btn-lang:hover #Vector {
-  stroke: #fff; /* ホバー時に色を変更 */
-}
-
-.header__btn-lang .header__btn-lang-text {
-  font-size: 0.7rem;
-  color: #2ea7e0;
-  font-weight: bold;
-}
-.header__btn-lang .header__btn-lang-text {
-  font-size: 0.7rem;
-  color: #2ea7e0;
-  font-weight: bold;
-}
-.header__btn-lang:hover .header__btn-lang-text {
-  color: #fff;
+.header__btn-lang:hover .fill-white {
+  fill: #fff; 
 }
 
 .header__btn-mypage {
   position: relative;
-  border: solid 1px #2ea7e0;
-  background: #fff;
-  cursor: pointer;
-  width: 34px;
-  height: 34px;
-  border-radius: 50px;
+  width: 36px;
+  height: 36px;
 }
 
 .header__btn-mypage a {
@@ -247,21 +225,7 @@ li {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 3px;
-  left: 50%;
-  transform: translateX(-50%);
 }
-
-.header__btn-mypage-text {
-  margin-top: 2px;
-  font-size: 0.3rem;
-  color: #2ea7e0;
-  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  white-space: nowrap;
-}
-
 .header__nav {
   position: fixed;
   z-index: 999;
@@ -279,19 +243,29 @@ li {
 .header__nav-logo {
   padding: 20px;
 }
-.header__nav-item {
-  padding: 10px 0;
-}
-
 .header__nav-item a {
   color: #2ea7e0;
   font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
   font-weight: 900;
   font-style: normal;
   font-size: 1.4rem;
+  display: block;
+  padding-bottom: 12px;
+}
+.header__nav-item span {
+  color: #2ea7e0;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.875rem; 
+  font-weight: bold;
+  display: block;
   line-height: 1.5;
 }
 .header__nav-item a:hover {
+  color: #e73118;
+}
+.header__nav-item a:hover span {
   color: #e73118;
 }
 .extra-nav-items {
@@ -402,13 +376,12 @@ main {
   padding-left: 15px;
   z-index: 9998;
 }
-.site-concept {
-  /* background-image: url(../img/concept_bg.png); */
-  background-repeat: no-repeat;
-  background-position: center;
+.site-concept__img-container {
   position: relative;
-  /* height: 500px;
-  margin: -300px 0 30px; */
+}
+.site-concept__img {
+  margin-top: -16px;
+  padding-bottom: 30px;
 }
 .site-concept p {
   color: #e73118;
@@ -418,10 +391,9 @@ main {
   font-size: 1.1rem;
   letter-spacing: 0.675rem;
   line-height: 2;
-  padding: 80px 0 100px 50px;
-  /* position: absolute;
-  top: 75%;
-  left: 50px; */
+  position: absolute;
+  top: 64px;
+  left: 53px;
 }
 .trip-themes {
   position: relative;
@@ -938,12 +910,12 @@ footer {
   letter-spacing: -0.18em;
 }
 
-/* .cls-8,
+.cls-8,
 .cls-9,
 .cls-10 {
   font-family: Brother-1816-Bold, "Brother 1816";
-  font-weight: 700;
-} */
+  font-weight: 900;
+}
 
 .cls-9,
 .cls-2 {
@@ -952,6 +924,8 @@ footer {
 
 .cls-11 {
   font-size: 1.2rem;
+  font-family: Brother-1816-Bold, "Brother 1816";
+  font-weight: 900;
 }
 
 .cls-11,
@@ -1124,9 +1098,15 @@ footer {
   line-height: 1.5;
   margin-bottom: 5px;
 }
-.spot-list__map-iframe {
+.spot-list__map {
   width: 100%;
   height: 90px;
+  overflow: hidden;
+}
+.spot-list__map-iframe {
+  width: 100%;
+  height: 280px;
+  margin: -70px 0;
   padding: 0 5px;
 }
 
@@ -1429,8 +1409,15 @@ footer {
   .header__nav-item a {
     font-size: 1rem;
   }
+  .header__nav-item span {
+    font-size: 0.53rem; 
+  }
   .center-content {
     border: none;
+  }
+  .site-concept p {
+    font-size: 0.9rem;
+    top: 40px;
   }
   .scroll-container__sticky {
     top: 180px;
