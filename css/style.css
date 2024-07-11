@@ -3,54 +3,6 @@ body {
   padding: 0;
   /* overflow-x: hidden; */
 }
-/* Toppan Bunkyu Midashi Go StdN */
-.toppan-midashi {
-  font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-/* Toppan BunkyuGothicPr6N R */
-.toppan-gothic-r {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-/* Toppan BunkyuGothicPr6N DB */
-.toppan-gothic-db {
-  font-family: "toppan-bunkyu-gothic-pr6n", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-/* Brother 1816/Bold */
-.brother-bold {
-  font-family: "brother-1816", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-/* Noto Sans CJK JP/Black */
-.noto-sans-black {
-  font-family: "noto-sans-cjk-jp", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-/* Kozuka Gothic Pr6N R */
-.kozuka-r {
-  font-family: "kozuka-gothic-pr6n", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-/* Kozuka Gothic Pr6N M */
-.kozuka-m {
-  font-family: "kozuka-gothic-pr6n", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-/* Kozuka Gothic Pr6N B */
-.kozuka-b {
-  font-family: "kozuka-gothic-pr6n", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
 a {
   text-decoration: none;
   cursor: pointer;
@@ -94,7 +46,7 @@ li {
   font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
   font-weight: 900;
   font-style: normal;
-  font-size: clamp(0.8rem, 1.4vw, 1.5rem); 
+  font-size: clamp(0.8rem, 1.4vw, 1.5rem);
   display: block;
   padding-bottom: 12px;
 }
@@ -103,7 +55,7 @@ li {
   font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: clamp(0.4rem, 0.8vw, 0.875rem); 
+  font-size: clamp(0.4rem, 0.8vw, 0.875rem);
   font-weight: bold;
   display: block;
   line-height: 1.5;
@@ -120,7 +72,7 @@ li {
 .background__extra-item a {
   color: #606060;
   font-size: 1vw;
-  font-weight: bold;
+  font-family: Inter;
   line-height: 1.5;
   padding: 10px 0;
 }
@@ -211,7 +163,7 @@ li {
 }
 
 .header__btn-lang:hover .fill-white {
-  fill: #fff; 
+  fill: #fff;
 }
 
 .header__btn-mypage {
@@ -229,7 +181,7 @@ li {
 .header__nav {
   position: fixed;
   z-index: 999;
-  top: -100vh;
+  top: -300vh;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -257,7 +209,7 @@ li {
   font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
   font-weight: bold;
   display: block;
   line-height: 1.5;
@@ -345,10 +297,19 @@ main {
 .splide__arrow svg {
   fill: #fff !important; /* SVGの色を白に設定 */
 }
-#main__mv-slider .splide__arrow--prev {
+.main__mv-slider .splide__arrow--prev {
   left: -10px !important; /* 矢印を左端に寄せる */
 }
-#main__mv-slider .splide__arrow--next {
+.main__mv-slider .splide__arrow--next {
+  right: -10px !important; /* 矢印を右端に寄せる */
+}
+.main__mv-slider .splide__pagination {
+  display: none;
+}
+.spot-details__slider .splide__arrow--prev {
+  left: -10px !important; /* 矢印を左端に寄せる */
+}
+.spot-details__slider .splide__arrow--next {
   right: -10px !important; /* 矢印を右端に寄せる */
 }
 .main__mv-slider {
@@ -380,6 +341,7 @@ main {
   position: relative;
 }
 .site-concept__img {
+  max-width: 100%;
   margin-top: -16px;
   padding-bottom: 30px;
 }
@@ -867,126 +829,85 @@ footer {
   text-align: center;
   margin-bottom: 30px;
 }
-
 .cls-1 {
-  letter-spacing: -0.25em;
+  stroke-width: 1.44px;
 }
 
 .cls-1,
 .cls-2 {
-  font-family: Brother-1816-Bold, "Brother 1816";
-  font-weight: 900;
+  fill: none;
+}
+
+.cls-1,
+.cls-3,
+.cls-4 {
+  stroke: #2ea7e0;
+}
+
+.cls-2,
+.cls-5 {
+  stroke-width: 0px;
 }
 
 .cls-3 {
-  stroke-width: 1.44px;
+  fill: url(#_10_lpi_20_);
 }
 
 .cls-3,
 .cls-4 {
-  fill: none;
-}
-
-.cls-3,
-.cls-5,
-.cls-6,
-.cls-7  {
-  stroke: #2ea7e0;
-  font-family: Brother-1816-Bold, "Brother 1816";
-  font-weight: 900;
-}
-
-.cls-4,
-.cls-7 {
-  stroke-width: 0px;
-}
-
-.cls-5 {
-  fill: url(#_10_lpi_20_);
-}
-
-.cls-5,
-.cls-6 {
   stroke-width: 3px;
 }
 
-.cls-8 {
-  letter-spacing: -0.18em;
-}
-
-.cls-8,
-.cls-9,
-.cls-10 {
-  font-family: Brother-1816-Bold, "Brother 1816";
-  font-weight: 900;
-}
-
-.cls-9,
-.cls-2 {
-  letter-spacing: -0.2em;
-}
-
-.cls-11 {
-  font-size: 1.2rem;
-  font-family: Brother-1816-Bold, "Brother 1816";
-  font-weight: 900;
-}
-
-.cls-11,
-.cls-7,
-.cls-12 {
+.cls-5 {
   fill: #2ea7e0;
 }
 
-.cls-12 {
-  font-size: 1.25rem;
-}
-
-.cls-6 {
+.cls-4 {
   fill: #fff;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-#aomori .cls-6,
-#towada .cls-6,
-#mutsu .cls-6,
-#gosho .cls-6,
-#hirosaki .cls-6,
-#shirakami .cls-6 {
+#aomori .cls-4,
+#towada .cls-4,
+#mutsu .cls-4,
+#goshogawara .cls-4,
+#hirosaki .cls-4,
+#shirakami .cls-4 {
   transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
-#aomori:hover .cls-6,
-#towada:hover .cls-6,
-#mutsu:hover .cls-6,
-#gosho:hover .cls-6,
-#hirosaki:hover .cls-6,
-#shirakami:hover .cls-6 {
+#aomori:hover .cls-4,
+#towada:hover .cls-4,
+#mutsu:hover .cls-4,
+#goshogawara:hover .cls-4,
+#hirosaki:hover .cls-4,
+#shirakami:hover .cls-4 {
   fill: #2ea7e0;
-  /* stroke: white; */
 }
-
-#aomori .cls-7,
-#towada .cls-7,
-#mutsu .cls-7,
-#gosho .cls-7,
-#hirosaki .cls-7,
-#shirakami .cls-7 {
+.highlight .cls-4 {
+  fill: #2ea7e0;
+}
+#aomori .cls-5,
+#towada .cls-5,
+#mutsu .cls-5,
+#goshogawara .cls-5,
+#hirosaki .cls-5,
+#shirakami .cls-5 {
   transition: fill 0.3s ease;
 }
-#aomori:hover .cls-7,
-#gosho:hover .cls-7,
-#hirosaki:hover .cls-7,
-#towada:hover .cls-11,
-#mutsu:hover .cls-11,
-#shirakami:hover .cls-12 {
+#aomori:hover .cls-5,
+#goshogawara:hover .cls-5,
+#hirosaki:hover .cls-5,
+#towada:hover .cls-5,
+#mutsu:hover .cls-5,
+#shirakami:hover .cls-5 {
   fill: #fff;
 }
 
-#towada:hover .cls-11,
-#mutsu:hover .cls-11,
-#shirakami:hover .cls-12 {
+.highlight .cls-5,
+.highlight .cls-5,
+.highlight .cls-5 {
   fill: #fff;
 }
 .map__image {
@@ -1074,7 +995,7 @@ footer {
 
 .spot-list__title {
   font-size: 1.375rem;
-  font-family: "brother-1816", sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #359dd1;
@@ -1086,7 +1007,7 @@ footer {
 .spot-list__city {
   font-size: 1rem;
   width: 86px;
-  font-family: "brother-1816", sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 500;
   font-style: normal;
   text-align: center;
@@ -1101,7 +1022,7 @@ footer {
 
 .spot-list__description {
   font-size: 1rem;
-  font-family: "Kozuka Gothic Pr6N";
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.0625rem;
@@ -1110,24 +1031,22 @@ footer {
 }
 .spot-list__map-container {
   position: relative;
-  display: flex;
 }
 .spot-list__map {
   width: 100%;
   height: 90px;
   overflow: hidden;
-
 }
 .spot-list__map-iframe {
-  width: 100%;
+  width: 93%;
   height: calc(90px + 200px);
   margin: -70px 0;
   padding: 0 15px 15px 5px;
 }
 .spot-list__fav {
-  /* position: absolute;
-  bottom: 0;
-  right: -10px; */
+  position: absolute;
+  bottom: -10px;
+  right: 0px;
 }
 
 /* 詳細ページ */
@@ -1217,17 +1136,6 @@ footer {
   height: 500px;
   width: 100%;
   margin: -170px 0;
-}
-.nearby-spots__map {
-  width: 95%;
-  height: 60px;
-  overflow: hidden;
-}
-.nearby-spots__map-iframe {
-  width: 95%;
-  height: 160px;
-  margin: -40px 0;
-  padding: 0 5px;
 }
 .spot-info {
   border: 1px solid #2ea7e0;
@@ -1362,6 +1270,9 @@ footer {
   line-height: 1.5;
   margin-bottom: 5px;
 }
+.nearby-spots__map-container {
+  position: relative;
+}
 .nearby-spots__map {
   width: 95%;
   height: 60px;
@@ -1372,6 +1283,11 @@ footer {
   height: 160px;
   margin: -40px 0;
   padding: 0 5px;
+}
+.nearby-spots__fav {
+  position: absolute;
+  bottom: -10px;
+  right: 4px;
 }
 .recommended-spots__heading {
   font-size: 1.375rem;
@@ -1397,7 +1313,7 @@ footer {
 .recommended-spots__item {
   display: flex;
   overflow: hidden;
-  width: 400px;
+  max-width: 400px;
   margin-bottom: 60px;
 }
 
@@ -1458,6 +1374,9 @@ footer {
   line-height: 1.5;
   margin-bottom: 5px;
 }
+.recommended-spots__map-container {
+  position: relative;
+}
 .recommended-spots__map {
   width: 95%;
   height: 60px;
@@ -1468,6 +1387,11 @@ footer {
   height: 160px;
   margin: -40px 0;
   padding: 0 5px;
+}
+.recommended-spots__fav {
+  position: absolute;
+  bottom: -10px;
+  right: 4px;
 }
 @media (max-width: 767px) {
   .background-left {
@@ -1481,7 +1405,7 @@ footer {
     font-size: 1rem;
   }
   .header__nav-item span {
-    font-size: 0.53rem; 
+    font-size: 0.53rem;
   }
   .center-content {
     border: none;
@@ -1532,8 +1456,13 @@ footer {
     margin-bottom: 2px;
   }
 
-  .spot-list__map-iframe {
+  .spot-list__map {
     height: 70px;
+    overflow: hidden;
+  }
+  .spot-list__map-iframe {
+    height: calc(70px + 90px);
+    margin: -120px 0;
   }
   .area__close-btn {
     right: 0;
@@ -1550,18 +1479,15 @@ footer {
     font-size: 0.7rem;
   }
   .en.small {
-    font-size: 0.5rem; /* 中程度に小さいフォントサイズ */
+    font-size: 0.5rem;
   }
 
   .en.smaller {
-    font-size: 0.4rem; /* より小さいフォントサイズ */
+    font-size: 0.4rem;
   }
-  /* .spot-details__title {
-    font-size: 4.4vw;
+  .spot-details__tags {
+    font-size: 3.5vw;
   }
-  .spot-details__description {
-    font-size: 4vw;
-  }  */
   .spot-details__tag {
     padding: 0 10px;
   }
@@ -1572,21 +1498,20 @@ footer {
   .nearby-spots__title {
     font-size: 4.125vw;
   }
-  .spot-details__tags {
-    font-size: 3.5vw;
-  }
   .nearby-spots__city {
     font-size: 3vw;
   }
   .nearby-spots__description {
     font-size: 3vw;
   }
-  .nearby-spots__map-iframe {
+  .nearby-spots__map {
     width: 38vw;
     height: 50px;
+    overflow: hidden;
   }
-  .recommended-spots__item {
-    width: 80vw;
+  .nearby-spots__map-iframe {
+    height: calc(50px + 80px);
+    margin: -40px 0;
   }
   .recommended-spots__item {
     width: 80vw;
@@ -1601,8 +1526,14 @@ footer {
   .recommended-spots__description {
     font-size: 3vw;
   }
-  .recommended-spots__map-iframe {
+  .recommended-spots__map {
     width: 38vw;
     height: 50px;
+    overflow: hidden;
+  }
+  .recommended-spots__map-iframe {
+    width: 38vw;
+    height: calc(50px + 80px);
+    margin: -40px 0;
   }
 }

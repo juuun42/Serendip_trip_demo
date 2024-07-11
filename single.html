@@ -171,7 +171,7 @@
                 </svg>
               </a>
             </div>
-            <div class="header__btn-mypage">
+            <!-- <div class="header__btn-mypage">
               <a href="">
                 <img
                   src="img/mypage-logo.svg"
@@ -181,7 +181,7 @@
                   height="36px"
                 />
               </a>
-            </div>
+            </div> -->
             <nav class="header__nav">
               <div class="header__nav-logo">
                 <a href="index.html"
@@ -193,16 +193,31 @@
                 /></a>
               </div>
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="">HOME</a></li>
                 <li class="header__nav-item">
-                  <a href="">WHAT IS SERENDIP TRIP ?</a>
+                  <a href="">HOME<br /><span>トップ</span></a>
                 </li>
-                <li class="header__nav-item"><a href="">COLUMN</a></li>
-                <li class="header__nav-item"><a href="">MODEL COURSE</a></li>
-                <li class="header__nav-item"><a href="">ABOUT US</a></li>
-                <li class="header__nav-item"><a href="">CONTACT</a></li>
+                <li class="header__nav-item">
+                  <a href=""
+                    >WHAT IS SERENDIP TRIP ?<br /><span
+                      >Serendip tripとは</span
+                    ></a
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="">COLUMN<br /><span>私の好きな青森</span></a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="">MODEL COURSE<br /><span>モデルコース</span></a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="">ABOUT US<br /><span>運営組織</span></a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="">CONTACT<br /><span>お問い合わせ</span></a>
+                </li>
                 <div class="extra-nav-items">
                   <li class="extra__nav-item"><a href="">PRIVACY POLICY</a></li>
+                  <li class="extra__extra-item"><a href="">T&C</a></li>
                   <li class="extra__nav-item">
                     <a href="">
                       <svg
@@ -267,11 +282,11 @@
                 <span class="spot-details__tag">定番</span>
                 <span class="spot-details__tag">体験・ふれあい</span>
               </div>
-              <div class="spot-details__favorite-btn">
+              <!-- <div class="spot-details__favorite-btn">
                 <img src="img/fav.svg" alt="" width="40px" />
-              </div>
+              </div> -->
             </div>
-            <div id="spot-details__slider" class="splide spot-details__slider">
+            <div class="splide spot-details__slider">
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
@@ -338,8 +353,11 @@
                       <a
                         href="https://maps.app.goo.gl/vVhahfr3bS246LrB6?g_st=com.google.maps"
                         class="spot-info__map-link"
-                        ><img src="img/maplink.svg" alt="" class="spot-info__map-img"></a
-                      >
+                        ><img
+                          src="img/maplink.svg"
+                          alt=""
+                          class="spot-info__map-img"
+                      /></a>
                     </td>
                   </tr>
                   <tr class="spot-info__row">
@@ -352,7 +370,11 @@
                   </tr>
                   <tr class="spot-info__row">
                     <td class="spot-info__label">URL</td>
-                    <td class="spot-info__value"><a href="" class="spot-info__url">https://www.mikami-apple-farm/</a></td>
+                    <td class="spot-info__value">
+                      <a href="" class="spot-info__url"
+                        >https://www.mikami-apple-farm/</a
+                      >
+                    </td>
                   </tr>
                   <tr class="spot-info__row">
                     <td class="spot-info__label">その他</td>
@@ -382,17 +404,22 @@
                     <p class="nearby-spots__description">
                       #りんごもぎが楽しめる #愉快なお父さん...
                     </p>
-                    <div class="nearby-spots__map">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="nearby-spots__map-iframe"
-                      ></iframe>
+                    <div class="nearby-spots__map-container">
+                      <div class="nearby-spots__map">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="nearby-spots__map-iframe"
+                        ></iframe>
+                      </div>
+                      <!-- <div class="nearby-spots__fav">
+                        <img src="img/fav.svg" alt="" width="25px" />
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -412,17 +439,22 @@
                     <p class="nearby-spots__description">
                       #りんごもぎが楽しめる #愉快なお父さん...
                     </p>
-                    <div class="nearby-spots__map">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="nearby-spots__map-iframe"
-                      ></iframe>
+                    <div class="nearby-spots__map-container">
+                      <div class="nearby-spots__map">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="nearby-spots__map-iframe"
+                        ></iframe>
+                      </div>
+                      <!-- <div class="nearby-spots__fav">
+                        <img src="img/fav.svg" alt="" width="25px" />
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -442,17 +474,22 @@
                     <p class="nearby-spots__description">
                       #りんごもぎが楽しめる #愉快なお父さん...
                     </p>
-                    <div class="nearby-spots__map">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="nearby-spots__map-iframe"
-                      ></iframe>
+                    <div class="nearby-spots__map-container">
+                      <div class="nearby-spots__map">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="nearby-spots__map-iframe"
+                        ></iframe>
+                      </div>
+                      <!-- <div class="nearby-spots__fav">
+                        <img src="img/fav.svg" alt="" width="25px" />
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -479,17 +516,22 @@
                     <p class="recommended-spots__description">
                       #りんごもぎが楽しめる #愉快なお父さん...
                     </p>
-                    <div class="recommended-spots__map">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="recommended-spots__map-iframe"
-                      ></iframe>
+                    <div class="recommended-spots__map-container">
+                      <div class="recommended-spots__map">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="recommended-spots__map-iframe"
+                        ></iframe>
+                      </div>
+                      <!-- <div class="recommended-spots__fav">
+                        <img src="img/fav.svg" alt="" width="25px" />
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -509,17 +551,22 @@
                     <p class="recommended-spots__description">
                       #りんごもぎが楽しめる #愉快なお父さん...
                     </p>
-                    <div class="recommended-spots__map">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="recommended-spots__map-iframe"
-                      ></iframe>
+                    <div class="recommended-spots__map-container">
+                      <div class="recommended-spots__map">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="recommended-spots__map-iframe"
+                        ></iframe>
+                      </div>
+                      <!-- <div class="recommended-spots__fav">
+                        <img src="img/fav.svg" alt="" width="25px" />
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -539,17 +586,22 @@
                     <p class="recommended-spots__description">
                       #りんごもぎが楽しめる #愉快なお父さん...
                     </p>
-                    <div class="recommended-spots__map">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="recommended-spots__map-iframe"
-                      ></iframe>
+                    <div class="recommended-spots__map-container">
+                      <div class="recommended-spots__map">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.0481440825206!2d140.73235637662873!3d40.826906171376606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f176.1!3m3!1m2!1s0x5f9b9fe95e41bfbf%3A0x26ae668520408bd4!2sAOMORI%20STARTUP%20CENTER!5e0!3m2!1sja!2sjp!4v1719208425335!5m2!1sja!2sjp"
+                          width="600"
+                          height="450"
+                          style="border: 0"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="recommended-spots__map-iframe"
+                        ></iframe>
+                      </div>
+                      <!-- <div class="recommended-spots__fav">
+                        <img src="img/fav.svg" alt="" width="25px" />
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -592,18 +644,33 @@
           </div>
           <nav class="background__nav">
             <ul class="background__nav-list">
-              <li class="background__nav-item"><a href="">HOME</a></li>
               <li class="background__nav-item">
-                <a href="">WHAT IS SERENDIP TRIP ?</a>
+                <a href="">HOME<br /><span>トップ</span></a>
               </li>
-              <li class="background__nav-item"><a href="">COLUMN</a></li>
-              <li class="background__nav-item"><a href="">MODEL COURSE</a></li>
-              <li class="background__nav-item"><a href="">ABOUT US</a></li>
-              <li class="background__nav-item"><a href="">CONTACT</a></li>
+              <li class="background__nav-item">
+                <a href=""
+                  >WHAT IS SERENDIP TRIP ?<br /><span
+                    >Serendip tripとは</span
+                  ></a
+                >
+              </li>
+              <li class="background__nav-item">
+                <a href="">COLUMN<br /><span>私の好きな青森</span></a>
+              </li>
+              <li class="background__nav-item">
+                <a href="">MODEL COURSE<br /><span>モデルコース</span></a>
+              </li>
+              <li class="background__nav-item">
+                <a href="">ABOUT US<br /><span>運営組織</span></a>
+              </li>
+              <li class="background__nav-item">
+                <a href="">CONTACT<br /><span>お問い合わせ</span></a>
+              </li>
               <div class="background__extra-items">
                 <li class="background__extra-item">
                   <a href="">PRIVACY POLICY</a>
                 </li>
+                <li class="background__extra-item"><a href="">T&C</a></li>
                 <li class="background__extra-item">
                   <a href="">
                     <svg

@@ -17,26 +17,6 @@ $(document).ready(function () {
     $(".search__modal").removeClass("active");
   });
 
-
-  //エリア絞り込みモーダル
-  $(".filter-container__btn").click(function () {
-    $(".area__modal").toggleClass("active");
-  });
-
-  $(".area__close-btn").click(function () {
-    $(".area__modal").removeClass("active");
-  });
-
-  $(".map__block").click(function () {
-    $(".area__modal").removeClass("active");
-  });
-
-  $(".map__label").click(function () {
-    $(".area__modal").removeClass("active");
-    $(".map__label").removeClass("highlight"); // 以前のハイライトを削除
-    $(this).addClass("highlight"); // クリックした要素にハイライトを追加
-  });
-
   // topページmvのsplide設定
   new Splide(".splide", {
     type: "loop",
@@ -45,23 +25,13 @@ $(document).ready(function () {
     arrowPath: 'M0.00400019 20.488L15.992 11.78L0.00400019 3.1L1.264 0.888L21.424 11.78L1.264 22.7L0.00400019 20.488Z',
     autoplay: true,
     interval: 4000,
-    pagination: false,
+    pagination: true,
   }).mount();
-
   // コラムのsplide設定
   new Splide(".splide-column", {
     type: "loop",
     perPage: 1,
     arrows: true,
-    autoplay: true,
-    interval: 4000,
-  }).mount();
-
-  // コラムのsplide設定
-  new Splide(".spot-details__slider", {
-    type: "loop",
-    perPage: 1,
-    arrows: false,
     autoplay: true,
     interval: 4000,
   }).mount();
@@ -93,3 +63,59 @@ $(document).click(function(event) {
     }
 });
 
+// エリア絞り込みモーダル
+document.addEventListener('DOMContentLoaded', (event) => {
+  const regions = document.querySelectorAll('#aomori, #towada, #mutsu, #goshogawara, #hirosaki, #shirakami');
+  const labels = document.querySelectorAll('.map__label');
+  const allElements = document.querySelectorAll('.map__block, .map__label'); // 共通のクラスを持つ要素を取得
+  const filterButton = document.querySelector('.filter-container__btn');
+  const closeButton = document.querySelector('.area__close-btn');
+  
+  // 地域ごとのマッピング
+  const regionLabelMap = {
+    'aomori': document.querySelector('.map__label--aomori'),
+    'hirosaki': document.querySelector('.map__label--hirosaki'),
+    'towada': document.querySelector('.map__label--towada'),
+    'goshogawara': document.querySelector('.map__label--goshogawara'),
+    'mutsu': document.querySelector('.map__label--mutsu'),
+    'shirakami': document.querySelector('.map__label--shirakami')
+  };
+
+  allElements.forEach(element => {
+    element.addEventListener('click', () => {
+      // すべてのSVG要素とラベルからクラスを削除
+      regions.forEach(r => r.classList.remove('highlight'));
+      labels.forEach(label => label.classList.remove('highlight'));
+
+      // すべてのモーダルから active クラスを削除
+      document.querySelectorAll('.area__modal').forEach(modal => modal.classList.remove('active'));
+
+      // ラベルをクリックした場合、対応するmap(svg)をハイライト
+      if (element.classList.contains('map__label')) {
+        element.classList.add('highlight');
+        const labelClass = element.classList[1].split('--')[1];
+        const region = document.getElementById(labelClass);
+        if (region) {
+          region.classList.add('highlight');
+        }
+      } else {
+        // map(svg)をクリックした場合、対応するラベルをハイライト
+        element.classList.add('highlight');
+        const labelClass = element.id;
+        if (regionLabelMap[labelClass]) {
+          regionLabelMap[labelClass].classList.add('highlight');
+        }
+      }
+    });
+  });
+
+  // フィルターボタンのクリックイベント
+  filterButton.addEventListener('click', () => {
+    document.querySelector('.area__modal').classList.toggle('active');
+  });
+
+  // クローズボタンのクリックイベント
+  closeButton.addEventListener('click', () => {
+    document.querySelector('.area__modal').classList.remove('active');
+  });
+});
