@@ -47,7 +47,7 @@ li {
   font-weight: 900;
   font-style: normal;
   font-size: clamp(0.8rem, 1.4vw, 1.5rem);
-  display: block;
+  display: inline-block;
   padding-bottom: 12px;
 }
 .background__nav-item span {
@@ -200,7 +200,7 @@ li {
   font-weight: 900;
   font-style: normal;
   font-size: 1.4rem;
-  display: block;
+  display: inline-block;
   padding-bottom: 12px;
 }
 .header__nav-item span {
