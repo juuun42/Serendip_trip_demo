@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
+  overflow-x: clip;
 }
 a {
   text-decoration: none;
@@ -82,9 +82,8 @@ li {
 .center-content {
   max-width: 500px;
   width: 100%;
-  /* contain: paint; */
   background-color: #fff;
-  border: 1px solid #2ea7e0;
+  outline: 1px solid #2ea7e0; 
   margin: 0 auto;
 }
 .header {
@@ -279,9 +278,9 @@ li {
 .header__nav.active {
   top: 0;
 }
-main {
+/* main {
   contain: paint;
-}
+} */
 .main__mv-slider {
   z-index: 10;
 }
@@ -533,15 +532,14 @@ main {
 .search__modal-container input[type="text"]:focus {
   outline: 0;
 }
-.search__modal-container input[type="submit"] {
+.search__modal-container button {
   cursor: pointer;
-  font-family: FontAwesome;
   border: none;
   background: #2ea7e0;
   position: absolute;
   width: 52px;
   height: 45px;
-  right: 0px;
+  right: -12px;
   top: 0px;
   outline: none;
 }
@@ -877,14 +875,6 @@ footer {
   transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
-#aomori:hover .cls-4,
-#towada:hover .cls-4,
-#mutsu:hover .cls-4,
-#goshogawara:hover .cls-4,
-#hirosaki:hover .cls-4,
-#shirakami:hover .cls-4 {
-  fill: #2ea7e0;
-}
 .highlight .cls-4 {
   fill: #2ea7e0;
 }
@@ -905,8 +895,6 @@ footer {
   fill: #fff;
 }
 
-.highlight .cls-5,
-.highlight .cls-5,
 .highlight .cls-5 {
   fill: #fff;
 }
@@ -1408,7 +1396,7 @@ footer {
     font-size: 0.53rem;
   }
   .center-content {
-    border: none;
+    /* border: none; */
   }
   .site-concept p {
     font-size: 0.9rem;
@@ -1436,6 +1424,9 @@ footer {
   }
   .search__modal {
     width: 100%;
+  }
+  .search__modal-container button {
+    right: 0px;
   }
   .search-results {
     font-size: 1.2rem;
