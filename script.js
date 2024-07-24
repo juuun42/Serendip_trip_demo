@@ -151,6 +151,7 @@ $(document).ready(function () {
       arrowPath: 'M0.00400019 20.488L15.992 11.78L0.00400019 3.1L1.264 0.888L21.424 11.78L1.264 22.7L0.00400019 20.488Z',
       autoplay: true,
       interval: 4000,
+      speed: 800,
       pagination: true,
     }).mount();
   }
